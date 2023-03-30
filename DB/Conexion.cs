@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 
-namespace DotNet_GenteFit.DB {
+namespace DotNet_GenteFit.DDBB {
     internal class DB {
         
         SqlConnection db;

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Usuario\\Desktop\\MAIDER PROYECTOS\\dotnet\\DotNet_GenteFit.csproj": {}
+    "C:\\Users\\joanb\\projects\\genteFit\\DotNet_GenteFit.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Usuario\\Desktop\\MAIDER PROYECTOS\\dotnet\\DotNet_GenteFit.csproj": {
+    "C:\\Users\\joanb\\projects\\genteFit\\DotNet_GenteFit.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Usuario\\Desktop\\MAIDER PROYECTOS\\dotnet\\DotNet_GenteFit.csproj",
+        "projectUniqueName": "C:\\Users\\joanb\\projects\\genteFit\\DotNet_GenteFit.csproj",
         "projectName": "DotNet_GenteFit",
-        "projectPath": "C:\\Users\\Usuario\\Desktop\\MAIDER PROYECTOS\\dotnet\\DotNet_GenteFit.csproj",
-        "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Usuario\\Desktop\\MAIDER PROYECTOS\\dotnet\\obj\\",
+        "projectPath": "C:\\Users\\joanb\\projects\\genteFit\\DotNet_GenteFit.csproj",
+        "packagesPath": "C:\\Users\\joanb\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\joanb\\projects\\genteFit\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\joanb\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
