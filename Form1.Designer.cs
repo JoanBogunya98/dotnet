@@ -30,8 +30,6 @@
         {
             comprobacionBd = new TextBox();
             label1 = new Label();
-            tablaBD = new DataGridView();
-            ((System.ComponentModel.ISupportInitialize)tablaBD).BeginInit();
             SuspendLayout();
             // 
             // comprobacionBd
@@ -52,28 +50,16 @@
             label1.Text = "Base de datos";
             label1.Click += label1_Click;
             // 
-            // tablaBD
-            // 
-            tablaBD.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            tablaBD.Location = new Point(226, 26);
-            tablaBD.Name = "tablaBD";
-            tablaBD.RowHeadersWidth = 51;
-            tablaBD.RowTemplate.Height = 29;
-            tablaBD.Size = new Size(300, 188);
-            tablaBD.TabIndex = 2;
-            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(817, 455);
-            Controls.Add(tablaBD);
             Controls.Add(label1);
             Controls.Add(comprobacionBd);
             Name = "Form1";
             Text = "Form1";
             Load += Form1_Load;
-            ((System.ComponentModel.ISupportInitialize)tablaBD).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -82,6 +68,5 @@
 
         private TextBox comprobacionBd;
         private Label label1;
-        private DataGridView tablaBD;
     }
 }
