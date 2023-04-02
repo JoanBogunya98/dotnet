@@ -6,5 +6,5 @@ Powhershell Desarrolladores
 	dotnet tool update --global dotnet-ef
 	dotnet add package Microsoft.EntityFrameworkCore.Design
 
-	dotnet ef dbcontext scaffold "Data Source=(local);Initial Catalog=GentefitDatabase;Integrated Security=True;Trust Server Certificate=true" Microsoft.EntityFrameworkCore.SqlServer -o Entidades
+	dotnet ef dbcontext scaffold "Data Source=(local);Initial Catalog=GentefitDatabase;Integrated Security=True;Trust Server Certificate=true" Microsoft.EntityFrameworkCore.SqlServer -o Entidades --context-dir . --force
 
