@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfAdministrador xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Administrador>
+    <IdAdmin>1</IdAdmin>
+    <EmailAdmin>email</EmailAdmin>
+    <UsernameAdmin>user</UsernameAdmin>
+    <PasswordAdmin>pass</PasswordAdmin>
+  </Administrador>
+  <Administrador>
+    <IdAdmin>2</IdAdmin>
+    <EmailAdmin>email2</EmailAdmin>
+    <UsernameAdmin>user2</UsernameAdmin>
+    <PasswordAdmin>pass2</PasswordAdmin>
+  </Administrador>
+</ArrayOfAdministrador>

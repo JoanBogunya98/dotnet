@@ -16,7 +16,7 @@ public partial class GentefitDatabaseContext : DbContext
     {
     }
 
-    public virtual DbSet<Administrador> Administradors { get; set; }
+    // virtual DbSet<Administrador> Administradors { get; set; }
 
     public virtual DbSet<Aula> Aulas { get; set; }
 
@@ -41,23 +41,23 @@ public partial class GentefitDatabaseContext : DbContext
     {
         modelBuilder.UseCollation("Latin1_General_CI_AS");
 
-        modelBuilder.Entity<Administrador>(entity =>
-        {
-            entity.HasKey(e => e.IdAdmin);
+        //modelBuilder.Entity<Administrador>(entity =>
+        //{
+        //    entity.HasKey(e => e.IdAdmin);
 
-            entity.ToTable("Administrador");
+        //    entity.ToTable("Administrador");
 
-            entity.Property(e => e.IdAdmin).HasColumnName("idAdmin");
-            entity.Property(e => e.EmailAdmin)
-                .HasMaxLength(50)
-                .HasColumnName("emailAdmin");
-            entity.Property(e => e.PasswordAdmin)
-                .HasMaxLength(50)
-                .HasColumnName("passwordAdmin");
-            entity.Property(e => e.UsernameAdmin)
-                .HasMaxLength(50)
-                .HasColumnName("usernameAdmin");
-        });
+        //    entity.Property(e => e.IdAdmin).HasColumnName("idAdmin");
+        //    entity.Property(e => e.EmailAdmin)
+        //        .HasMaxLength(50)
+        //        .HasColumnName("emailAdmin");
+        //    entity.Property(e => e.PasswordAdmin)
+        //        .HasMaxLength(50)
+        //        .HasColumnName("passwordAdmin");
+        //    entity.Property(e => e.UsernameAdmin)
+        //        .HasMaxLength(50)
+        //        .HasColumnName("usernameAdmin");
+        //});
 
         modelBuilder.Entity<Aula>(entity =>
         {
