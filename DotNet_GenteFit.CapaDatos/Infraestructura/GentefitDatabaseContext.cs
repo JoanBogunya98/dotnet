@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using DotNet_GenteFit.CapaDatos.Entidades;
 using Microsoft.EntityFrameworkCore;
 
-namespace DotNet_GenteFit.CapaDatos;
+namespace DotNet_GenteFit.CapaDatos.Infraestructura;
 
 public partial class GentefitDatabaseContext : DbContext
 {
@@ -24,7 +24,7 @@ public partial class GentefitDatabaseContext : DbContext
 
     public virtual DbSet<Curso> Cursos { get; set; }
 
-    public virtual DbSet<Dium> Dia { get; set; }
+    public virtual DbSet<Dia> Dia { get; set; }
 
     public virtual DbSet<Especialidad> Especialidads { get; set; }
 
@@ -141,9 +141,11 @@ public partial class GentefitDatabaseContext : DbContext
                 .HasConstraintName("FK_Curso_Profesor");
         });
 
-        modelBuilder.Entity<Dium>(entity =>
+        modelBuilder.Entity<Dia>(entity =>
         {
             entity.HasKey(e => e.IdDia);
+
+            entity.ToTable("Dia");
 
             entity.Property(e => e.IdDia).HasColumnName("idDia");
             entity.Property(e => e.Fecha)

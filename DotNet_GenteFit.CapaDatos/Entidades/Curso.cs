@@ -19,7 +19,7 @@ public partial class Curso
 
     public virtual Aula IdAulaNavigation { get; set; } = null!;
 
-    public virtual Dium IdDiaNavigation { get; set; } = null!;
+    public virtual Dia IdDiaNavigation { get; set; } = null!;
 
     public virtual Hora IdHoraNavigation { get; set; } = null!;
 

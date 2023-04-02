@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace DotNet_GenteFit.CapaDatos.Entidades;
 
-public partial class Dium
+public partial class Dia
 {
     public int IdDia { get; set; }
 
