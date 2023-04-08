@@ -7,66 +7,41 @@ namespace DotNet_GenteFit.CapaDatos.Infraestructura;
 
 public partial class GentefitDatabaseContext : DbContext
 {
-    public GentefitDatabaseContext()
-    {
-    }
-
     public GentefitDatabaseContext(DbContextOptions<GentefitDatabaseContext> options)
         : base(options)
     {
     }
 
-    // virtual DbSet<Administrador> Administradors { get; set; }
-
-    public virtual DbSet<Aula> Aulas { get; set; }
+    public virtual DbSet<Actividad> Actividads { get; set; }
 
     public virtual DbSet<Cliente> Clientes { get; set; }
 
-    public virtual DbSet<Curso> Cursos { get; set; }
-
-    public virtual DbSet<Dia> Dia { get; set; }
-
     public virtual DbSet<Especialidad> Especialidads { get; set; }
 
-    public virtual DbSet<Hora> Horas { get; set; }
+    public virtual DbSet<Horario> Horarios { get; set; }
 
-    public virtual DbSet<Profesor> Profesors { get; set; }
+    public virtual DbSet<Monitor> Monitors { get; set; }
 
     public virtual DbSet<Reserva> Reservas { get; set; }
 
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        => optionsBuilder.UseSqlServer("Data Source=(local);Initial Catalog=GentefitDatabase;Integrated Security=True;Trust Server Certificate=true");
+    public virtual DbSet<Sala> Salas { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.UseCollation("Latin1_General_CI_AS");
 
-        //modelBuilder.Entity<Administrador>(entity =>
-        //{
-        //    entity.HasKey(e => e.IdAdmin);
-
-        //    entity.ToTable("Administrador");
-
-        //    entity.Property(e => e.IdAdmin).HasColumnName("idAdmin");
-        //    entity.Property(e => e.EmailAdmin)
-        //        .HasMaxLength(50)
-        //        .HasColumnName("emailAdmin");
-        //    entity.Property(e => e.PasswordAdmin)
-        //        .HasMaxLength(50)
-        //        .HasColumnName("passwordAdmin");
-        //    entity.Property(e => e.UsernameAdmin)
-        //        .HasMaxLength(50)
-        //        .HasColumnName("usernameAdmin");
-        //});
-
-        modelBuilder.Entity<Aula>(entity =>
+        modelBuilder.Entity<Actividad>(entity =>
         {
-            entity.HasKey(e => e.IdAula);
+            entity.HasKey(e => e.IdActividad).HasName("PK_Actividades");
 
-            entity.ToTable("Aula");
+            entity.ToTable("Actividad");
 
-            entity.Property(e => e.IdAula).HasColumnName("idAula");
-            entity.Property(e => e.NumeroAula).HasColumnName("numeroAula");
+            entity.Property(e => e.IdActividad).HasColumnName("idActividad");
+            entity.Property(e => e.NombreActividad)
+                .IsRequired()
+                .HasMaxLength(255)
+                .IsUnicode(false)
+                .HasColumnName("nombreActividad");
         });
 
         modelBuilder.Entity<Cliente>(entity =>
@@ -77,12 +52,15 @@ public partial class GentefitDatabaseContext : DbContext
 
             entity.Property(e => e.IdCliente).HasColumnName("idCliente");
             entity.Property(e => e.CuentaBanco)
+                .IsRequired()
                 .HasMaxLength(50)
                 .HasColumnName("cuentaBanco");
             entity.Property(e => e.DireccionCliente)
+                .IsRequired()
                 .HasMaxLength(50)
                 .HasColumnName("direccionCliente");
             entity.Property(e => e.EmailCliente)
+                .IsRequired()
                 .HasMaxLength(50)
                 .HasColumnName("emailCliente");
             entity.Property(e => e.FechaAlta)
@@ -92,65 +70,21 @@ public partial class GentefitDatabaseContext : DbContext
                 .HasColumnType("date")
                 .HasColumnName("fechanacimientoCliente");
             entity.Property(e => e.GeneroCliente)
+                .IsRequired()
                 .HasMaxLength(50)
                 .HasColumnName("generoCliente");
             entity.Property(e => e.NombreCliente)
+                .IsRequired()
                 .HasMaxLength(50)
                 .HasColumnName("nombreCliente");
             entity.Property(e => e.PasswordCliente)
+                .IsRequired()
                 .HasMaxLength(50)
                 .HasColumnName("passwordCliente");
             entity.Property(e => e.UsernameCliente)
+                .IsRequired()
                 .HasMaxLength(50)
                 .HasColumnName("usernameCliente");
-        });
-
-        modelBuilder.Entity<Curso>(entity =>
-        {
-            entity.HasKey(e => e.IdCurso);
-
-            entity.ToTable("Curso");
-
-            entity.Property(e => e.IdCurso).HasColumnName("idCurso");
-            entity.Property(e => e.IdAula).HasColumnName("idAula");
-            entity.Property(e => e.IdDia).HasColumnName("idDia");
-            entity.Property(e => e.IdHora).HasColumnName("idHora");
-            entity.Property(e => e.IdProfesor).HasColumnName("idProfesor");
-            entity.Property(e => e.NombreCurso)
-                .HasMaxLength(50)
-                .HasColumnName("nombreCurso");
-
-            entity.HasOne(d => d.IdAulaNavigation).WithMany(p => p.Cursos)
-                .HasForeignKey(d => d.IdAula)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK_Curso_Aula");
-
-            entity.HasOne(d => d.IdDiaNavigation).WithMany(p => p.Cursos)
-                .HasForeignKey(d => d.IdDia)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK_Curso_Dia");
-
-            entity.HasOne(d => d.IdHoraNavigation).WithMany(p => p.Cursos)
-                .HasForeignKey(d => d.IdHora)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK_Curso_Hora");
-
-            entity.HasOne(d => d.IdProfesorNavigation).WithMany(p => p.Cursos)
-                .HasForeignKey(d => d.IdProfesor)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK_Curso_Profesor");
-        });
-
-        modelBuilder.Entity<Dia>(entity =>
-        {
-            entity.HasKey(e => e.IdDia);
-
-            entity.ToTable("Dia");
-
-            entity.Property(e => e.IdDia).HasColumnName("idDia");
-            entity.Property(e => e.Fecha)
-                .HasColumnType("date")
-                .HasColumnName("fecha");
         });
 
         modelBuilder.Entity<Especialidad>(entity =>
@@ -161,34 +95,58 @@ public partial class GentefitDatabaseContext : DbContext
 
             entity.Property(e => e.IdEspecialidad).HasColumnName("idEspecialidad");
             entity.Property(e => e.NombreEspecialidad)
+                .IsRequired()
                 .HasMaxLength(50)
                 .HasColumnName("nombreEspecialidad");
         });
 
-        modelBuilder.Entity<Hora>(entity =>
+        modelBuilder.Entity<Horario>(entity =>
         {
-            entity.HasKey(e => e.IdHora);
+            entity.HasKey(e => e.IdHorario).HasName("PK_Curso");
 
-            entity.ToTable("Hora");
+            entity.ToTable("Horario");
 
-            entity.Property(e => e.IdHora).HasColumnName("idHora");
-            entity.Property(e => e.HoraFinal).HasColumnName("horaFinal");
+            entity.Property(e => e.IdHorario).HasColumnName("idHorario");
+            entity.Property(e => e.CapacidadMaxima).HasColumnName("capacidadMaxima");
+            entity.Property(e => e.Dia)
+                .HasColumnType("date")
+                .HasColumnName("dia");
+            entity.Property(e => e.HoraFin).HasColumnName("horaFin");
             entity.Property(e => e.HoraInicio).HasColumnName("horaInicio");
+            entity.Property(e => e.IdActividad).HasColumnName("idActividad");
+            entity.Property(e => e.IdMonitor).HasColumnName("idMonitor");
+            entity.Property(e => e.IdSala).HasColumnName("idSala");
+
+            entity.HasOne(d => d.IdActividadNavigation).WithMany(p => p.Horarios)
+                .HasForeignKey(d => d.IdActividad)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_Horario_Actividad");
+
+            entity.HasOne(d => d.IdMonitorNavigation).WithMany(p => p.Horarios)
+                .HasForeignKey(d => d.IdMonitor)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_Curso_Monitor");
+
+            entity.HasOne(d => d.IdSalaNavigation).WithMany(p => p.Horarios)
+                .HasForeignKey(d => d.IdSala)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_Curso_Sala");
         });
 
-        modelBuilder.Entity<Profesor>(entity =>
+        modelBuilder.Entity<Monitor>(entity =>
         {
-            entity.HasKey(e => e.IdProfesor);
+            entity.HasKey(e => e.IdMonitor).HasName("PK_Profesor");
 
-            entity.ToTable("Profesor");
+            entity.ToTable("Monitor");
 
-            entity.Property(e => e.IdProfesor).HasColumnName("idProfesor");
+            entity.Property(e => e.IdMonitor).HasColumnName("idMonitor");
             entity.Property(e => e.IdEspecialidad).HasColumnName("idEspecialidad");
-            entity.Property(e => e.NombreProfesor)
+            entity.Property(e => e.NombreMonitor)
+                .IsRequired()
                 .HasMaxLength(50)
-                .HasColumnName("nombreProfesor");
+                .HasColumnName("nombreMonitor");
 
-            entity.HasOne(d => d.IdEspecialidadNavigation).WithMany(p => p.Profesors)
+            entity.HasOne(d => d.IdEspecialidadNavigation).WithMany(p => p.Monitors)
                 .HasForeignKey(d => d.IdEspecialidad)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_Profesor_Profesor");
@@ -203,18 +161,32 @@ public partial class GentefitDatabaseContext : DbContext
             entity.Property(e => e.IdReserva).HasColumnName("idReserva");
             entity.Property(e => e.Estado).HasColumnName("estado");
             entity.Property(e => e.IdCliente).HasColumnName("idCliente");
-            entity.Property(e => e.IdCurso).HasColumnName("idCurso");
-            entity.Property(e => e.NumeroEspera).HasColumnName("numeroEspera");
+            entity.Property(e => e.IdHorario).HasColumnName("idHorario");
+            entity.Property(e => e.OrdenInscripcion).HasColumnName("ordenInscripcion");
 
             entity.HasOne(d => d.IdClienteNavigation).WithMany(p => p.Reservas)
                 .HasForeignKey(d => d.IdCliente)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_Reserva_Cliente");
 
-            entity.HasOne(d => d.IdCursoNavigation).WithMany(p => p.Reservas)
-                .HasForeignKey(d => d.IdCurso)
+            entity.HasOne(d => d.IdHorarioNavigation).WithMany(p => p.Reservas)
+                .HasForeignKey(d => d.IdHorario)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK_Reserva_Curso");
+                .HasConstraintName("FK_Reserva_Horario");
+        });
+
+        modelBuilder.Entity<Sala>(entity =>
+        {
+            entity.HasKey(e => e.IdSala).HasName("PK_Aula");
+
+            entity.ToTable("Sala");
+
+            entity.Property(e => e.IdSala).HasColumnName("idSala");
+            entity.Property(e => e.NombreSala)
+                .IsRequired()
+                .HasMaxLength(255)
+                .IsUnicode(false)
+                .HasColumnName("nombreSala");
         });
 
         OnModelCreatingPartial(modelBuilder);

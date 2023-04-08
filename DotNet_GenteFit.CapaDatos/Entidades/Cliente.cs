@@ -7,23 +7,23 @@ public partial class Cliente
 {
     public int IdCliente { get; set; }
 
-    public string NombreCliente { get; set; } = null!;
+    public string NombreCliente { get; set; }
 
-    public string DireccionCliente { get; set; } = null!;
+    public string DireccionCliente { get; set; }
 
-    public string GeneroCliente { get; set; } = null!;
+    public string GeneroCliente { get; set; }
 
     public DateTime FechanacimientoCliente { get; set; }
 
     public DateTime FechaAlta { get; set; }
 
-    public string CuentaBanco { get; set; } = null!;
+    public string CuentaBanco { get; set; }
 
-    public string EmailCliente { get; set; } = null!;
+    public string EmailCliente { get; set; }
 
-    public string UsernameCliente { get; set; } = null!;
+    public string UsernameCliente { get; set; }
 
-    public string PasswordCliente { get; set; } = null!;
+    public string PasswordCliente { get; set; }
 
     public virtual ICollection<Reserva> Reservas { get; } = new List<Reserva>();
 }

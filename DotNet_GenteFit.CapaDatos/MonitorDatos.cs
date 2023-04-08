@@ -1,42 +1,44 @@
 ﻿using DotNet_GenteFit.CapaDatos.Entidades;
 using DotNet_GenteFit.CapaDatos.Infraestructura;
 using DotNet_GenteFit.CapaDatos.Interfaces;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace DotNet_GenteFit.CapaDatos
 {
-    public class ProfesorDatos : IProfesorDatos
+    public class MonitorDatos : IMonitorDatos
     {
         private readonly IDbFactory context;
 
-        public ProfesorDatos() : this(new DbFactory()) { }
+        public MonitorDatos() : this(new DbFactory()) { }
 
-        public ProfesorDatos(IDbFactory context)
+        public MonitorDatos(IDbFactory context)
         {
             this.context = context;
         }
 
-        public List<Profesor> LeerProfesores()
+        public List<Monitor> LeerMonitores()
         {
             using var db = context.GetContext();
-            return db.Profesors.ToList();
+            return db.Monitors.ToList();
         }
-        public void ActualizarProfesor(Profesor profesor)
+        public void ActualizarMonitor(Monitor profesor)
         {
             using var db = context.GetContext();
-            db.Profesors.Update(profesor);
+            db.Monitors.Update(profesor);
             db.SaveChanges();
         }
-        public void CrearProfesor(Profesor profesor)
+        public void CrearMonitor(Monitor profesor)
         {
             using var db = context.GetContext();
-            db.Profesors.Add(profesor);
+            db.Monitors.Add(profesor);
             db.SaveChanges();
         }
 
-        public void BorrarProfesor(int idProfesor)
+        public void BorrarMonitor(int idMonitor)
         {
             using var db = context.GetContext();
-            db.Profesors.Remove(new Profesor { IdProfesor = idProfesor });
+            db.Monitors.Remove(new Monitor { IdMonitor = idMonitor });
             db.SaveChanges();
         }
     }

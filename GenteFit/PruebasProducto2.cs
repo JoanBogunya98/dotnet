@@ -1,41 +1,48 @@
 using DotNet_GenteFit.CapaDatos;
 using DotNet_GenteFit.CapaDatos.Entidades;
+using System;
+using System.Linq;
+using System.Windows.Forms;
 
 namespace DotNet_GenteFit
 {
     public partial class PruebasProducto2 : Form
     {
-        private readonly ProfesorDatos profesores;
+        private readonly MonitorDatos monitores;
+        private readonly SalasDatos salas;
+        private readonly ActividadDatos actividades;
         private readonly AdministradorDatos administradores;
 
         public PruebasProducto2()
         {
             InitializeComponent();
-            profesores = new ProfesorDatos();
+            monitores = new MonitorDatos();
+            salas = new SalasDatos();
+            actividades = new ActividadDatos();
             administradores = new AdministradorDatos("recursos/administradores.xml");
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var lista = profesores.LeerProfesores();
-            txtDebug.Text = string.Join(Environment.NewLine, lista.Select(n => $"{n.IdProfesor} - {n.NombreProfesor}"));
+            var lista = monitores.LeerMonitores();
+            txtDebug.Text = string.Join(Environment.NewLine, lista.Select(n => $"{n.IdMonitor} - {n.NombreMonitor}"));
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            var profesor = new Profesor
+            var profesor = new Monitor
             {
                 IdEspecialidad = 1,
-                NombreProfesor = $"Arnold S {DateTime.Now.Ticks}"
+                NombreMonitor = $"Arnold S {DateTime.Now.Ticks}"
             };
-            profesores.CrearProfesor(profesor);
+            monitores.CrearMonitor(profesor);
         }
 
         private void cmdBorrar_Click(object sender, EventArgs e)
         {
             if (int.TryParse(txtBorrar.Text, out var res))
             {
-                profesores.BorrarProfesor(res);
+                monitores.BorrarMonitor(res);
             }
             else
             {
@@ -49,9 +56,16 @@ namespace DotNet_GenteFit
             txtDebug.Text = string.Join(Environment.NewLine, lista.Select(n => $"{n.IdAdmin} - {n.UsernameAdmin}"));
         }
 
-        private void PruebasProducto2_Load(object sender, EventArgs e)
+        private void button4_Click(object sender, EventArgs e)
         {
+            var lista = salas.LeerSalas();
+            txtDebug.Text = string.Join(Environment.NewLine, lista.Select(n => $"{n.IdSala} - {n.NombreSala}"));
+        }
 
+        private void button5_Click(object sender, EventArgs e)
+        {
+            var lista = actividades.LeerActividades();
+            txtDebug.Text = string.Join(Environment.NewLine, lista.Select(n => $"{n.IdActividad} - {n.NombreActividad}"));
         }
     }
 }

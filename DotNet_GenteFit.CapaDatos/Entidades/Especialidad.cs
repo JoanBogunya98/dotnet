@@ -7,7 +7,7 @@ public partial class Especialidad
 {
     public int IdEspecialidad { get; set; }
 
-    public string NombreEspecialidad { get; set; } = null!;
+    public string NombreEspecialidad { get; set; }
 
-    public virtual ICollection<Profesor> Profesors { get; } = new List<Profesor>();
+    public virtual ICollection<Monitor> Monitors { get; } = new List<Monitor>();
 }
