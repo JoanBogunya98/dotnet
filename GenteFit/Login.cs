@@ -1,4 +1,5 @@
-﻿using DotNet_GenteFit.CapaDatos.Entidades;
+﻿using DotNet_GenteFit.CapaDatos;
+using DotNet_GenteFit.CapaDatos.Entidades;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -14,9 +15,15 @@ namespace DotNet_GenteFit
 {
     public partial class Login : Form
     {
+        private ClientesDatos _clientes;
+        private AdministradorDatos _admins;
+
         public Login()
         {
             InitializeComponent();
+            _clientes = new ClientesDatos();
+            _admins = new AdministradorDatos("recursos/administradores.xml");
+
         }
 
         private void login_Click(object sender, EventArgs e)
@@ -25,11 +32,11 @@ namespace DotNet_GenteFit
             string usuario = textBoxUsuario.Text;
             string contraseña = textBoxContraseña.Text;
 
-            using (var context = new DBContext())
-            {
-                Cliente cliente = context.Clientes.FirstOrDefault(c => c.UsernameCliente == usuario && c.PasswordCliente == contraseña);
 
-                Administrador admin = context.Administradores.FirstOrDefault(a => a.UsernameAdmin == usuario && a.PasswordAdmin == contraseña);
+
+            Cliente cliente = _clientes.BuscaCliente(usuario, contraseña);
+
+            Administrador admin = _admins.BuscarAdmin(usuario, contraseña);
 
                 if (cliente != null)
                 {
@@ -53,7 +60,6 @@ namespace DotNet_GenteFit
                 {
                     MessageBox.Show("Credenciales inválidas. Intente nuevamente.");
                 }
-            }
         }
 
         private void registro_Click(object sender, EventArgs e)

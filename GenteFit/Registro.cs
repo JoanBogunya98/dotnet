@@ -1,4 +1,5 @@
-﻿using DotNet_GenteFit.CapaDatos.Entidades;
+﻿using DotNet_GenteFit.CapaDatos;
+using DotNet_GenteFit.CapaDatos.Entidades;
 using DotNet_GenteFit.CapaDatos.Infraestructura;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -15,9 +16,13 @@ namespace DotNet_GenteFit
 {
     public partial class Registro : Form
     {
+        private ClientesDatos _clientes;
+
         public Registro()
         {
-            InitializeComponent();
+            InitializeComponent(); 
+            _clientes = new ClientesDatos();
+
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -101,13 +106,13 @@ namespace DotNet_GenteFit
             nuevoCliente.CuentaBanco = cuentaBanco;
             nuevoCliente.EmailCliente = email;
             nuevoCliente.UsernameCliente = username;
+            nuevoCliente.NombreCliente = username;
             nuevoCliente.PasswordCliente = password;
 
-            using (var context = new GentefitDatabaseContext(new DbContextOptionsBuilder<GentefitDatabaseContext>().UseSqlServer(connectionString).Options))
-            {
-                context.Clientes.Add(nuevoCliente);
-                context.SaveChanges();
-            }
+
+
+            _clientes.NuevoCliente(nuevoCliente);
+            
 
             MessageBox.Show("El cliente se ha registrado correctamente");
             this.Close();

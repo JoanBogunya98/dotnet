@@ -19,6 +19,11 @@ namespace DotNet_GenteFit.CapaDatos
             this.fileName = file;
         }
 
+        public Administrador BuscarAdmin(string usuario, string contraseña)
+        {
+            return LeerAdministradores().FirstOrDefault(a => a.UsernameAdmin == usuario && a.PasswordAdmin == contraseña);
+        }
+
         public List<Administrador> LeerAdministradores()
         {
             //CrearFicheroXml();

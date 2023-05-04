@@ -1,4 +1,5 @@
-﻿using DotNet_GenteFit.CapaDatos.Infraestructura;
+﻿using DotNet_GenteFit.CapaDatos;
+using DotNet_GenteFit.CapaDatos.Infraestructura;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,9 +14,13 @@ namespace DotNet_GenteFit
 {
     public partial class CursosCliente : Form
     {
+        private readonly CursosDatos _curso;
+
         public CursosCliente()
         {
             InitializeComponent();
+            _curso = new CursosDatos();
+
         }
 
         private void logout_Click(object sender, EventArgs e)
@@ -37,29 +42,9 @@ namespace DotNet_GenteFit
 
         public void CargarCursos()
         {
-            using (var contexto = new GentefitDatabaseContext())
-            {
-                var cursos = from actividad in contexto.Actividads
-                             join especialidad in contexto.Especialidads on actividad.IdEspecialidad equals especialidad.IdEspecialidad
-                             join horario in contexto.Horarios on actividad.IdHorario equals horario.IdHorario
-                             join monitor in contexto.Monitors on actividad.IdMonitor equals monitor.IdMonitor
-                             join sala in contexto.Salas on actividad.IdSala equals sala.IdSala
-                             select new
-                             {
-                                 IdActividad = actividad.IdActividad,
-                                 NombreActividad = actividad.NombreActividad,
-                                 NombreEspecialidad = especialidad.NombreEspecialidad,
-                                 Dia = horario.Dia,
-                                 HoraInicio = horario.HoraInicio,
-                                 HoraFin = horario.HoraFin,
-                                 NombreMonitor = monitor.NombreMonitor,
-                                 NombreSala = sala.NombreSala
-                             };
-
-                cursos.DataSource = cursos.ToList();
-                cursos.DisplayMember = "NombreActividad";
-                cursos.ValueMember = "IdActividad";
-            }
+            cursos.DataSource = _curso.ObtenerCursos();
+            cursos.DisplayMember = "NombreActividad";
+            cursos.ValueMember = "IdActividad";
         }
 
 
