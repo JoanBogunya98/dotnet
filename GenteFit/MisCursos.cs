@@ -1,5 +1,4 @@
 ﻿using DotNet_GenteFit.CapaDatos;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.VisualBasic.ApplicationServices;
 using System;
 using System.Collections.Generic;
@@ -47,22 +46,8 @@ namespace DotNet_GenteFit
 
         public void CargarCursos()
         {
-            int idCliente = 0; 
-
-            if (User.Identity.IsAuthenticated)
-            {
-                using (var dbContext = new TuDbContext())
-                {
-                    string nombreUsuario = User.Identity.Name;
-
-                    var cliente = dbContext.Clientes.FirstOrDefault(c => c.UsernameCliente == nombreUsuario);
-
-                    if (cliente != null)
-                    {
-                        idCliente = cliente.IdCliente;
-                    }
-                }
-            }
+            // Falta conseguir el idCliente para pasarlo como argumento a la funcion ObetnerCursosCliente
+            int idCliente = 0;
             listBox1.DataSource = _curso.ObtenerCursosCliente(idCliente);
             listBox1.DisplayMember = "NombreActividad";
             listBox1.ValueMember = "IdActividad";
