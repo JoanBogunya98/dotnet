@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TodosClientes));
             pictureBox1 = new System.Windows.Forms.PictureBox();
             pictureBox2 = new System.Windows.Forms.PictureBox();
             button1 = new System.Windows.Forms.Button();
@@ -41,7 +42,7 @@
             // 
             pictureBox1.Location = new System.Drawing.Point(1, 0);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new System.Drawing.Size(798, 50);
+            pictureBox1.Size = new System.Drawing.Size(912, 47);
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 
@@ -49,47 +50,52 @@
             // 
             pictureBox2.Location = new System.Drawing.Point(1, 0);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new System.Drawing.Size(100, 50);
+            pictureBox2.Size = new System.Drawing.Size(114, 47);
             pictureBox2.TabIndex = 1;
             pictureBox2.TabStop = false;
             // 
             // button1
             // 
-            button1.Location = new System.Drawing.Point(698, 0);
+            button1.Location = new System.Drawing.Point(798, 0);
             button1.Name = "button1";
-            button1.Size = new System.Drawing.Size(101, 50);
+            button1.Size = new System.Drawing.Size(115, 47);
             button1.TabIndex = 2;
-            button1.Text = "button1";
+            button1.Text = "Logout";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // button2
             // 
-            button2.Location = new System.Drawing.Point(591, 0);
+            button2.Location = new System.Drawing.Point(675, 0);
             button2.Name = "button2";
-            button2.Size = new System.Drawing.Size(101, 50);
+            button2.Size = new System.Drawing.Size(115, 47);
             button2.TabIndex = 3;
-            button2.Text = "button2";
+            button2.Text = "Menú";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // listBox1
             // 
             listBox1.FormattingEnabled = true;
-            listBox1.ItemHeight = 15;
-            listBox1.Location = new System.Drawing.Point(81, 111);
+            listBox1.ItemHeight = 14;
+            listBox1.Location = new System.Drawing.Point(93, 104);
             listBox1.Name = "listBox1";
-            listBox1.Size = new System.Drawing.Size(578, 154);
+            listBox1.Size = new System.Drawing.Size(660, 144);
             listBox1.TabIndex = 4;
             // 
             // TodosClientes
             // 
-            AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            AutoScaleDimensions = new System.Drawing.SizeF(8F, 14F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            ClientSize = new System.Drawing.Size(800, 450);
+            BackColor = System.Drawing.Color.DarkSlateBlue;
+            ClientSize = new System.Drawing.Size(914, 420);
             Controls.Add(listBox1);
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(pictureBox2);
             Controls.Add(pictureBox1);
+            Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            Icon = (System.Drawing.Icon)resources.GetObject("$this.Icon");
             Name = "TodosClientes";
             Text = "TodosClientes";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

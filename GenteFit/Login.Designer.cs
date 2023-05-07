@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             pictureBox1 = new System.Windows.Forms.PictureBox();
             pictureBox2 = new System.Windows.Forms.PictureBox();
             IniciarSesion = new System.Windows.Forms.Button();
@@ -42,7 +43,7 @@
             // 
             pictureBox1.Location = new System.Drawing.Point(-1, -2);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new System.Drawing.Size(654, 50);
+            pictureBox1.Size = new System.Drawing.Size(747, 47);
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 
@@ -50,15 +51,15 @@
             // 
             pictureBox2.Location = new System.Drawing.Point(-1, -2);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new System.Drawing.Size(100, 50);
+            pictureBox2.Size = new System.Drawing.Size(114, 47);
             pictureBox2.TabIndex = 1;
             pictureBox2.TabStop = false;
             // 
             // IniciarSesion
             // 
-            IniciarSesion.Location = new System.Drawing.Point(265, 193);
+            IniciarSesion.Location = new System.Drawing.Point(303, 180);
             IniciarSesion.Name = "IniciarSesion";
-            IniciarSesion.Size = new System.Drawing.Size(102, 28);
+            IniciarSesion.Size = new System.Drawing.Size(117, 26);
             IniciarSesion.TabIndex = 3;
             IniciarSesion.Text = "Iniciar sesión";
             IniciarSesion.UseVisualStyleBackColor = true;
@@ -66,9 +67,9 @@
             // 
             // registrarse
             // 
-            registrarse.Location = new System.Drawing.Point(265, 246);
+            registrarse.Location = new System.Drawing.Point(303, 230);
             registrarse.Name = "registrarse";
-            registrarse.Size = new System.Drawing.Size(102, 28);
+            registrarse.Size = new System.Drawing.Size(117, 26);
             registrarse.TabIndex = 4;
             registrarse.Text = "Registrarse";
             registrarse.UseVisualStyleBackColor = true;
@@ -76,32 +77,36 @@
             // 
             // textBoxContraseña
             // 
-            textBoxContraseña.Location = new System.Drawing.Point(247, 138);
+            textBoxContraseña.Location = new System.Drawing.Point(282, 129);
             textBoxContraseña.Name = "textBoxContraseña";
-            textBoxContraseña.Size = new System.Drawing.Size(135, 23);
+            textBoxContraseña.PlaceholderText = "Contraseña";
+            textBoxContraseña.Size = new System.Drawing.Size(154, 22);
             textBoxContraseña.TabIndex = 5;
-            textBoxContraseña.Text = "Contraseña";
             // 
             // textBoxUsuario
             // 
-            textBoxUsuario.Location = new System.Drawing.Point(247, 91);
+            textBoxUsuario.Location = new System.Drawing.Point(282, 85);
             textBoxUsuario.Name = "textBoxUsuario";
-            textBoxUsuario.Size = new System.Drawing.Size(135, 23);
+            textBoxUsuario.PlaceholderText = "Usuario";
+            textBoxUsuario.Size = new System.Drawing.Size(154, 22);
             textBoxUsuario.TabIndex = 6;
             // 
             // Login
             // 
-            AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            AutoScaleDimensions = new System.Drawing.SizeF(8F, 14F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            ClientSize = new System.Drawing.Size(656, 450);
+            BackColor = System.Drawing.Color.DarkSlateBlue;
+            ClientSize = new System.Drawing.Size(750, 420);
             Controls.Add(textBoxUsuario);
             Controls.Add(textBoxContraseña);
             Controls.Add(registrarse);
             Controls.Add(IniciarSesion);
             Controls.Add(pictureBox2);
             Controls.Add(pictureBox1);
+            Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            Icon = (System.Drawing.Icon)resources.GetObject("$this.Icon");
             Name = "Login";
-            Text = "Form1";
+            Text = "Login";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);

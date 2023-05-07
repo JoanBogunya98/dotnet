@@ -20,7 +20,7 @@ namespace DotNet_GenteFit
 
         public Registro()
         {
-            InitializeComponent(); 
+            InitializeComponent();
             _clientes = new ClientesDatos();
 
         }
@@ -112,7 +112,7 @@ namespace DotNet_GenteFit
 
 
             _clientes.NuevoCliente(nuevoCliente);
-            
+
 
             MessageBox.Show("El cliente se ha registrado correctamente");
             this.Close();
@@ -139,6 +139,20 @@ namespace DotNet_GenteFit
         private void textDireccion_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void Registro_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void menu_Click(object sender, EventArgs e)
+        {
+            Home home = new Home();
+
+            this.Hide();
+
+            home.Show();
         }
     }
 }

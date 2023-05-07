@@ -16,5 +16,22 @@ namespace DotNet_GenteFit
         {
             InitializeComponent();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            MenuAdministrador menuAdministrador = new MenuAdministrador();
+
+            this.Hide();
+
+            menuAdministrador.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            foreach (Form form in Application.OpenForms)
+            {
+                form.Close();
+            }
+        }
     }
 }

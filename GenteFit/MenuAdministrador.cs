@@ -42,5 +42,10 @@ namespace DotNet_GenteFit
 
             todosClientes.Show();
         }
+
+        private void MenuAdministrador_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

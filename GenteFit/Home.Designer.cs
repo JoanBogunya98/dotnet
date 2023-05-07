@@ -28,82 +28,84 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
             pictureBox1 = new System.Windows.Forms.PictureBox();
             textBox1 = new System.Windows.Forms.TextBox();
             textBox2 = new System.Windows.Forms.TextBox();
             login = new System.Windows.Forms.Button();
             registrarse = new System.Windows.Forms.Button();
-            pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
             // pictureBox1
             // 
             pictureBox1.Location = new System.Drawing.Point(0, 0);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new System.Drawing.Size(685, 50);
+            pictureBox1.Size = new System.Drawing.Size(783, 47);
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 
             // textBox1
             // 
-            textBox1.Location = new System.Drawing.Point(252, 86);
+            textBox1.BackColor = System.Drawing.Color.DarkSlateBlue;
+            textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            textBox1.Location = new System.Drawing.Point(288, 80);
             textBox1.Name = "textBox1";
-            textBox1.Size = new System.Drawing.Size(100, 23);
+            textBox1.Size = new System.Drawing.Size(114, 15);
             textBox1.TabIndex = 1;
+            textBox1.Text = "GenteFit";
+            textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox2
             // 
-            textBox2.Location = new System.Drawing.Point(252, 125);
+            textBox2.BackColor = System.Drawing.Color.DarkSlateBlue;
+            textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            textBox2.Location = new System.Drawing.Point(239, 119);
             textBox2.Name = "textBox2";
-            textBox2.Size = new System.Drawing.Size(100, 23);
+            textBox2.Size = new System.Drawing.Size(220, 15);
             textBox2.TabIndex = 2;
+            textBox2.Text = "\r\n¡La app de tu gimnasio!\r\n";
+            textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            textBox2.TextChanged += textBox2_TextChanged;
             // 
             // login
             // 
-            login.Location = new System.Drawing.Point(252, 178);
+            login.BackColor = System.Drawing.Color.LavenderBlush;
+            login.Location = new System.Drawing.Point(288, 166);
             login.Name = "login";
-            login.Size = new System.Drawing.Size(100, 23);
+            login.Size = new System.Drawing.Size(114, 21);
             login.TabIndex = 3;
             login.Text = "Iniciar sesión";
-            login.UseVisualStyleBackColor = true;
+            login.UseVisualStyleBackColor = false;
             login.Click += login_Click;
             // 
             // registrarse
             // 
-            registrarse.Location = new System.Drawing.Point(252, 223);
+            registrarse.Location = new System.Drawing.Point(288, 208);
             registrarse.Name = "registrarse";
-            registrarse.Size = new System.Drawing.Size(100, 23);
+            registrarse.Size = new System.Drawing.Size(114, 21);
             registrarse.TabIndex = 4;
-            registrarse.Text = "registrarse";
+            registrarse.Text = "Registrarse";
             registrarse.UseVisualStyleBackColor = true;
             registrarse.Click += button2_Click;
             // 
-            // pictureBox2
-            // 
-            pictureBox2.Location = new System.Drawing.Point(0, 0);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new System.Drawing.Size(100, 50);
-            pictureBox2.TabIndex = 6;
-            pictureBox2.TabStop = false;
-            // 
             // Home
             // 
-            AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            AutoScaleDimensions = new System.Drawing.SizeF(8F, 14F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            ClientSize = new System.Drawing.Size(684, 375);
-            Controls.Add(pictureBox2);
+            BackColor = System.Drawing.Color.DarkSlateBlue;
+            ClientSize = new System.Drawing.Size(684, 411);
             Controls.Add(registrarse);
             Controls.Add(login);
             Controls.Add(textBox2);
             Controls.Add(textBox1);
             Controls.Add(pictureBox1);
+            Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            Icon = (System.Drawing.Icon)resources.GetObject("$this.Icon");
             Name = "Home";
-            Text = "FormInicio";
+            Text = "Home";
             Load += FormInicio_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -115,6 +117,5 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button login;
         private System.Windows.Forms.Button registrarse;
-        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

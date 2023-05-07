@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ModificarAdmin));
             pictureBox1 = new System.Windows.Forms.PictureBox();
             logout = new System.Windows.Forms.Button();
             menu = new System.Windows.Forms.Button();
@@ -43,15 +44,15 @@
             // 
             pictureBox1.Location = new System.Drawing.Point(1, 1);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new System.Drawing.Size(798, 50);
+            pictureBox1.Size = new System.Drawing.Size(912, 47);
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 
             // logout
             // 
-            logout.Location = new System.Drawing.Point(698, 1);
+            logout.Location = new System.Drawing.Point(798, 1);
             logout.Name = "logout";
-            logout.Size = new System.Drawing.Size(101, 50);
+            logout.Size = new System.Drawing.Size(115, 47);
             logout.TabIndex = 1;
             logout.Text = "Logout";
             logout.UseVisualStyleBackColor = true;
@@ -59,9 +60,9 @@
             // 
             // menu
             // 
-            menu.Location = new System.Drawing.Point(591, 1);
+            menu.Location = new System.Drawing.Point(675, 1);
             menu.Name = "menu";
-            menu.Size = new System.Drawing.Size(101, 50);
+            menu.Size = new System.Drawing.Size(115, 47);
             menu.TabIndex = 2;
             menu.Text = "Menú";
             menu.UseVisualStyleBackColor = true;
@@ -71,38 +72,39 @@
             // 
             pictureBox2.Location = new System.Drawing.Point(1, 1);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new System.Drawing.Size(100, 50);
+            pictureBox2.Size = new System.Drawing.Size(114, 47);
             pictureBox2.TabIndex = 3;
             pictureBox2.TabStop = false;
             // 
             // textBox1
             // 
-            textBox1.Location = new System.Drawing.Point(309, 118);
+            textBox1.Location = new System.Drawing.Point(353, 110);
             textBox1.Name = "textBox1";
-            textBox1.Size = new System.Drawing.Size(100, 23);
+            textBox1.Size = new System.Drawing.Size(114, 22);
             textBox1.TabIndex = 4;
             // 
             // textBox2
             // 
-            textBox2.Location = new System.Drawing.Point(309, 177);
+            textBox2.Location = new System.Drawing.Point(353, 165);
             textBox2.Name = "textBox2";
-            textBox2.Size = new System.Drawing.Size(100, 23);
+            textBox2.Size = new System.Drawing.Size(114, 22);
             textBox2.TabIndex = 5;
             // 
             // button3
             // 
-            button3.Location = new System.Drawing.Point(309, 261);
+            button3.Location = new System.Drawing.Point(353, 244);
             button3.Name = "button3";
-            button3.Size = new System.Drawing.Size(101, 50);
+            button3.Size = new System.Drawing.Size(115, 47);
             button3.TabIndex = 6;
-            button3.Text = "button3";
+            button3.Text = "Guardar";
             button3.UseVisualStyleBackColor = true;
             // 
             // ModificarAdmin
             // 
-            AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            AutoScaleDimensions = new System.Drawing.SizeF(8F, 14F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            ClientSize = new System.Drawing.Size(800, 450);
+            BackColor = System.Drawing.Color.DarkSlateBlue;
+            ClientSize = new System.Drawing.Size(914, 420);
             Controls.Add(button3);
             Controls.Add(textBox2);
             Controls.Add(textBox1);
@@ -110,6 +112,8 @@
             Controls.Add(menu);
             Controls.Add(logout);
             Controls.Add(pictureBox1);
+            Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            Icon = (System.Drawing.Icon)resources.GetObject("$this.Icon");
             Name = "ModificarAdmin";
             Text = "ModificarAdmin";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

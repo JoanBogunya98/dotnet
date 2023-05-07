@@ -28,9 +28,9 @@ namespace DotNet_GenteFit
         {
 
             cursos.DataSource = _curso.ObtenerCursos();
-                cursos.DisplayMember = "NombreActividad";
-                cursos.ValueMember = "IdActividad";
-            
+            cursos.DisplayMember = "NombreActividad";
+            cursos.ValueMember = "IdActividad";
+
         }
 
 

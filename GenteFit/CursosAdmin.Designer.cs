@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CursosAdmin));
             pictureBox1 = new System.Windows.Forms.PictureBox();
             pictureBox2 = new System.Windows.Forms.PictureBox();
             logout = new System.Windows.Forms.Button();
@@ -42,7 +43,7 @@
             // 
             pictureBox1.Location = new System.Drawing.Point(0, -1);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new System.Drawing.Size(798, 50);
+            pictureBox1.Size = new System.Drawing.Size(912, 47);
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 
@@ -50,15 +51,15 @@
             // 
             pictureBox2.Location = new System.Drawing.Point(0, -1);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new System.Drawing.Size(100, 50);
+            pictureBox2.Size = new System.Drawing.Size(114, 47);
             pictureBox2.TabIndex = 1;
             pictureBox2.TabStop = false;
             // 
             // logout
             // 
-            logout.Location = new System.Drawing.Point(699, -1);
+            logout.Location = new System.Drawing.Point(799, -1);
             logout.Name = "logout";
-            logout.Size = new System.Drawing.Size(99, 50);
+            logout.Size = new System.Drawing.Size(113, 47);
             logout.TabIndex = 2;
             logout.Text = "Logout";
             logout.UseVisualStyleBackColor = true;
@@ -66,9 +67,9 @@
             // 
             // menu
             // 
-            menu.Location = new System.Drawing.Point(594, -1);
+            menu.Location = new System.Drawing.Point(679, -1);
             menu.Name = "menu";
-            menu.Size = new System.Drawing.Size(99, 50);
+            menu.Size = new System.Drawing.Size(113, 47);
             menu.TabIndex = 3;
             menu.Text = "Menú";
             menu.UseVisualStyleBackColor = true;
@@ -76,9 +77,9 @@
             // 
             // addCurso
             // 
-            addCurso.Location = new System.Drawing.Point(273, 302);
+            addCurso.Location = new System.Drawing.Point(312, 282);
             addCurso.Name = "addCurso";
-            addCurso.Size = new System.Drawing.Size(217, 50);
+            addCurso.Size = new System.Drawing.Size(248, 47);
             addCurso.TabIndex = 4;
             addCurso.Text = "Insertar Nuevo Curso";
             addCurso.UseVisualStyleBackColor = true;
@@ -87,24 +88,27 @@
             // cursos
             // 
             cursos.FormattingEnabled = true;
-            cursos.ItemHeight = 15;
-            cursos.Location = new System.Drawing.Point(94, 111);
+            cursos.ItemHeight = 14;
+            cursos.Location = new System.Drawing.Point(107, 104);
             cursos.Name = "cursos";
-            cursos.Size = new System.Drawing.Size(588, 154);
+            cursos.Size = new System.Drawing.Size(671, 144);
             cursos.TabIndex = 5;
             cursos.SelectedIndexChanged += cursos_SelectedIndexChanged;
             // 
             // CursosAdmin
             // 
-            AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            AutoScaleDimensions = new System.Drawing.SizeF(8F, 14F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            ClientSize = new System.Drawing.Size(800, 450);
+            BackColor = System.Drawing.Color.DarkSlateBlue;
+            ClientSize = new System.Drawing.Size(914, 420);
             Controls.Add(cursos);
             Controls.Add(addCurso);
             Controls.Add(menu);
             Controls.Add(logout);
             Controls.Add(pictureBox2);
             Controls.Add(pictureBox1);
+            Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            Icon = (System.Drawing.Icon)resources.GetObject("$this.Icon");
             Name = "CursosAdmin";
             Text = "CursosAdmin";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

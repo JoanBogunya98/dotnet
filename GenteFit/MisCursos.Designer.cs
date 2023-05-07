@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MisCursos));
             pictureBox1 = new System.Windows.Forms.PictureBox();
             button1 = new System.Windows.Forms.Button();
             button2 = new System.Windows.Forms.Button();
@@ -41,57 +42,64 @@
             // 
             pictureBox1.Location = new System.Drawing.Point(0, 1);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new System.Drawing.Size(799, 50);
+            pictureBox1.Size = new System.Drawing.Size(913, 47);
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 
             // button1
             // 
-            button1.Location = new System.Drawing.Point(700, 1);
+            button1.Location = new System.Drawing.Point(800, 1);
             button1.Name = "button1";
-            button1.Size = new System.Drawing.Size(99, 50);
+            button1.Size = new System.Drawing.Size(113, 47);
             button1.TabIndex = 1;
-            button1.Text = "button1";
+            button1.Text = "Logout";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // button2
             // 
-            button2.Location = new System.Drawing.Point(595, 1);
+            button2.Location = new System.Drawing.Point(680, 1);
             button2.Name = "button2";
-            button2.Size = new System.Drawing.Size(99, 50);
+            button2.Size = new System.Drawing.Size(113, 47);
             button2.TabIndex = 2;
-            button2.Text = "button2";
+            button2.Text = "Menú";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // pictureBox2
             // 
             pictureBox2.Location = new System.Drawing.Point(0, 1);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new System.Drawing.Size(100, 50);
+            pictureBox2.Size = new System.Drawing.Size(114, 47);
             pictureBox2.TabIndex = 3;
             pictureBox2.TabStop = false;
             // 
             // listBox1
             // 
             listBox1.FormattingEnabled = true;
-            listBox1.ItemHeight = 15;
-            listBox1.Location = new System.Drawing.Point(101, 121);
+            listBox1.ItemHeight = 14;
+            listBox1.Location = new System.Drawing.Point(115, 113);
             listBox1.Name = "listBox1";
-            listBox1.Size = new System.Drawing.Size(516, 124);
+            listBox1.Size = new System.Drawing.Size(589, 116);
             listBox1.TabIndex = 4;
+            listBox1.SelectedIndexChanged += listBox1_SelectedIndexChanged;
             // 
             // MisCursos
             // 
-            AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            AutoScaleDimensions = new System.Drawing.SizeF(8F, 14F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            ClientSize = new System.Drawing.Size(800, 450);
+            BackColor = System.Drawing.Color.DarkSlateBlue;
+            ClientSize = new System.Drawing.Size(914, 420);
             Controls.Add(listBox1);
             Controls.Add(pictureBox2);
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(pictureBox1);
+            Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            Icon = (System.Drawing.Icon)resources.GetObject("$this.Icon");
             Name = "MisCursos";
             Text = "MisCursos";
+            Load += MisCursos_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);

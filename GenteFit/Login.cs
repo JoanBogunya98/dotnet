@@ -38,28 +38,28 @@ namespace DotNet_GenteFit
 
             Administrador admin = _admins.BuscarAdmin(usuario, contraseña);
 
-                if (cliente != null)
-                {
-                    MenuCliente MenuCliente = new MenuCliente();
+            if (cliente != null)
+            {
+                MenuCliente MenuCliente = new MenuCliente();
 
-                    this.Hide();
+                this.Hide();
 
-                    MenuCliente.Show();
-                }
+                MenuCliente.Show();
+            }
 
-                else if (admin != null)
-                {
+            else if (admin != null)
+            {
 
-                    MenuAdministrador MenuAdministrador = new MenuAdministrador();
+                MenuAdministrador MenuAdministrador = new MenuAdministrador();
 
-                    this.Hide();
+                this.Hide();
 
-                    MenuAdministrador.Show();
-                }
-                else
-                {
-                    MessageBox.Show("Credenciales inválidas. Intente nuevamente.");
-                }
+                MenuAdministrador.Show();
+            }
+            else
+            {
+                MessageBox.Show("Credenciales inválidas. Intente nuevamente.");
+            }
         }
 
         private void registro_Click(object sender, EventArgs e)

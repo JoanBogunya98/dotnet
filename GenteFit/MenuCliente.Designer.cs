@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuCliente));
             Logout = new System.Windows.Forms.Button();
             pictureBox1 = new System.Windows.Forms.PictureBox();
             pictureBox2 = new System.Windows.Forms.PictureBox();
-            label1 = new System.Windows.Forms.Label();
             listAllCursos = new System.Windows.Forms.Button();
             listMyCursos = new System.Windows.Forms.Button();
             ModificarDatos = new System.Windows.Forms.Button();
@@ -41,9 +41,9 @@
             // 
             // Logout
             // 
-            Logout.Location = new System.Drawing.Point(593, -3);
+            Logout.Location = new System.Drawing.Point(678, -3);
             Logout.Name = "Logout";
-            Logout.Size = new System.Drawing.Size(102, 50);
+            Logout.Size = new System.Drawing.Size(117, 47);
             Logout.TabIndex = 0;
             Logout.Text = "Logout";
             Logout.UseVisualStyleBackColor = true;
@@ -53,7 +53,7 @@
             // 
             pictureBox1.Location = new System.Drawing.Point(-1, -3);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new System.Drawing.Size(696, 50);
+            pictureBox1.Size = new System.Drawing.Size(795, 47);
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
             pictureBox1.Click += pictureBox1_Click;
@@ -62,25 +62,15 @@
             // 
             pictureBox2.Location = new System.Drawing.Point(-1, -3);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new System.Drawing.Size(100, 50);
+            pictureBox2.Size = new System.Drawing.Size(114, 47);
             pictureBox2.TabIndex = 2;
             pictureBox2.TabStop = false;
             // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new System.Drawing.Point(341, 12);
-            label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(38, 15);
-            label1.TabIndex = 3;
-            label1.Text = "label1";
-            label1.Click += label1_Click;
-            // 
             // listAllCursos
             // 
-            listAllCursos.Location = new System.Drawing.Point(249, 112);
+            listAllCursos.Location = new System.Drawing.Point(285, 105);
             listAllCursos.Name = "listAllCursos";
-            listAllCursos.Size = new System.Drawing.Size(206, 50);
+            listAllCursos.Size = new System.Drawing.Size(235, 47);
             listAllCursos.TabIndex = 4;
             listAllCursos.Text = "Ver todos los Cursos";
             listAllCursos.UseVisualStyleBackColor = true;
@@ -88,9 +78,9 @@
             // 
             // listMyCursos
             // 
-            listMyCursos.Location = new System.Drawing.Point(249, 195);
+            listMyCursos.Location = new System.Drawing.Point(285, 182);
             listMyCursos.Name = "listMyCursos";
-            listMyCursos.Size = new System.Drawing.Size(206, 50);
+            listMyCursos.Size = new System.Drawing.Size(235, 47);
             listMyCursos.TabIndex = 5;
             listMyCursos.Text = "Ver Mis Cursos";
             listMyCursos.UseVisualStyleBackColor = true;
@@ -98,9 +88,9 @@
             // 
             // ModificarDatos
             // 
-            ModificarDatos.Location = new System.Drawing.Point(249, 283);
+            ModificarDatos.Location = new System.Drawing.Point(285, 264);
             ModificarDatos.Name = "ModificarDatos";
-            ModificarDatos.Size = new System.Drawing.Size(206, 50);
+            ModificarDatos.Size = new System.Drawing.Size(235, 47);
             ModificarDatos.TabIndex = 6;
             ModificarDatos.Text = "Modificar Datos Personales";
             ModificarDatos.UseVisualStyleBackColor = true;
@@ -108,22 +98,23 @@
             // 
             // MenuCliente
             // 
-            AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            AutoScaleDimensions = new System.Drawing.SizeF(8F, 14F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            ClientSize = new System.Drawing.Size(695, 450);
+            BackColor = System.Drawing.Color.DarkSlateBlue;
+            ClientSize = new System.Drawing.Size(796, 411);
             Controls.Add(ModificarDatos);
             Controls.Add(listMyCursos);
             Controls.Add(listAllCursos);
-            Controls.Add(label1);
             Controls.Add(pictureBox2);
             Controls.Add(Logout);
             Controls.Add(pictureBox1);
+            Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            Icon = (System.Drawing.Icon)resources.GetObject("$this.Icon");
             Name = "MenuCliente";
             Text = "MenuCliente";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -131,7 +122,6 @@
         private System.Windows.Forms.Button Logout;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button listAllCursos;
         private System.Windows.Forms.Button listMyCursos;
         private System.Windows.Forms.Button ModificarDatos;

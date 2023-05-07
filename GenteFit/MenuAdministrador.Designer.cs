@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuAdministrador));
             pictureBox1 = new System.Windows.Forms.PictureBox();
             pictureBox2 = new System.Windows.Forms.PictureBox();
             logout = new System.Windows.Forms.Button();
@@ -41,7 +42,7 @@
             // 
             pictureBox1.Location = new System.Drawing.Point(0, 0);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new System.Drawing.Size(663, 50);
+            pictureBox1.Size = new System.Drawing.Size(758, 47);
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 
@@ -49,15 +50,15 @@
             // 
             pictureBox2.Location = new System.Drawing.Point(0, 0);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new System.Drawing.Size(100, 50);
+            pictureBox2.Size = new System.Drawing.Size(114, 47);
             pictureBox2.TabIndex = 1;
             pictureBox2.TabStop = false;
             // 
             // logout
             // 
-            logout.Location = new System.Drawing.Point(559, 0);
+            logout.Location = new System.Drawing.Point(639, 0);
             logout.Name = "logout";
-            logout.Size = new System.Drawing.Size(104, 50);
+            logout.Size = new System.Drawing.Size(119, 47);
             logout.TabIndex = 2;
             logout.Text = "Logout";
             logout.UseVisualStyleBackColor = true;
@@ -65,9 +66,9 @@
             // 
             // listAllCursos
             // 
-            listAllCursos.Location = new System.Drawing.Point(210, 140);
+            listAllCursos.Location = new System.Drawing.Point(240, 131);
             listAllCursos.Name = "listAllCursos";
-            listAllCursos.Size = new System.Drawing.Size(202, 50);
+            listAllCursos.Size = new System.Drawing.Size(231, 47);
             listAllCursos.TabIndex = 3;
             listAllCursos.Text = "Ver Todos los Cursos";
             listAllCursos.UseVisualStyleBackColor = true;
@@ -75,9 +76,9 @@
             // 
             // listAllClientes
             // 
-            listAllClientes.Location = new System.Drawing.Point(210, 220);
+            listAllClientes.Location = new System.Drawing.Point(240, 205);
             listAllClientes.Name = "listAllClientes";
-            listAllClientes.Size = new System.Drawing.Size(202, 50);
+            listAllClientes.Size = new System.Drawing.Size(231, 47);
             listAllClientes.TabIndex = 4;
             listAllClientes.Text = "Ver Todos los Clientes";
             listAllClientes.UseVisualStyleBackColor = true;
@@ -85,16 +86,20 @@
             // 
             // MenuAdministrador
             // 
-            AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            AutoScaleDimensions = new System.Drawing.SizeF(8F, 14F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            ClientSize = new System.Drawing.Size(661, 450);
+            BackColor = System.Drawing.Color.DarkSlateBlue;
+            ClientSize = new System.Drawing.Size(755, 420);
             Controls.Add(listAllClientes);
             Controls.Add(listAllCursos);
             Controls.Add(logout);
             Controls.Add(pictureBox2);
             Controls.Add(pictureBox1);
+            Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            Icon = (System.Drawing.Icon)resources.GetObject("$this.Icon");
             Name = "MenuAdministrador";
             Text = "MenuAdministrador";
+            Load += MenuAdministrador_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);

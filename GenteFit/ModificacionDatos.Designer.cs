@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ModificacionDatos));
             pictureBox1 = new System.Windows.Forms.PictureBox();
             pictureBox2 = new System.Windows.Forms.PictureBox();
             button1 = new System.Windows.Forms.Button();
@@ -43,7 +44,7 @@
             // 
             pictureBox1.Location = new System.Drawing.Point(1, -2);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new System.Drawing.Size(800, 50);
+            pictureBox1.Size = new System.Drawing.Size(914, 47);
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 
@@ -51,56 +52,59 @@
             // 
             pictureBox2.Location = new System.Drawing.Point(1, -2);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new System.Drawing.Size(100, 50);
+            pictureBox2.Size = new System.Drawing.Size(114, 47);
             pictureBox2.TabIndex = 1;
             pictureBox2.TabStop = false;
             // 
             // button1
             // 
-            button1.Location = new System.Drawing.Point(695, -2);
+            button1.Location = new System.Drawing.Point(794, -2);
             button1.Name = "button1";
-            button1.Size = new System.Drawing.Size(106, 50);
+            button1.Size = new System.Drawing.Size(121, 47);
             button1.TabIndex = 2;
-            button1.Text = "button1";
+            button1.Text = "Logout";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // button2
             // 
-            button2.Location = new System.Drawing.Point(583, -2);
+            button2.Location = new System.Drawing.Point(666, -2);
             button2.Name = "button2";
-            button2.Size = new System.Drawing.Size(106, 50);
+            button2.Size = new System.Drawing.Size(121, 47);
             button2.TabIndex = 3;
-            button2.Text = "button2";
+            button2.Text = "Menú";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // button5
             // 
-            button5.Location = new System.Drawing.Point(314, 258);
+            button5.Location = new System.Drawing.Point(359, 241);
             button5.Name = "button5";
-            button5.Size = new System.Drawing.Size(106, 50);
+            button5.Size = new System.Drawing.Size(121, 47);
             button5.TabIndex = 6;
-            button5.Text = "button5";
+            button5.Text = "Guardar";
             button5.UseVisualStyleBackColor = true;
             // 
             // textBox1
             // 
-            textBox1.Location = new System.Drawing.Point(314, 108);
+            textBox1.Location = new System.Drawing.Point(359, 101);
             textBox1.Name = "textBox1";
-            textBox1.Size = new System.Drawing.Size(100, 23);
+            textBox1.Size = new System.Drawing.Size(114, 22);
             textBox1.TabIndex = 7;
             // 
             // textBox2
             // 
-            textBox2.Location = new System.Drawing.Point(314, 165);
+            textBox2.Location = new System.Drawing.Point(359, 154);
             textBox2.Name = "textBox2";
-            textBox2.Size = new System.Drawing.Size(100, 23);
+            textBox2.Size = new System.Drawing.Size(114, 22);
             textBox2.TabIndex = 8;
             // 
             // ModificacionDatos
             // 
-            AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            AutoScaleDimensions = new System.Drawing.SizeF(8F, 14F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            ClientSize = new System.Drawing.Size(800, 450);
+            BackColor = System.Drawing.Color.DarkSlateBlue;
+            ClientSize = new System.Drawing.Size(914, 420);
             Controls.Add(textBox2);
             Controls.Add(textBox1);
             Controls.Add(button5);
@@ -108,6 +112,8 @@
             Controls.Add(button1);
             Controls.Add(pictureBox2);
             Controls.Add(pictureBox1);
+            Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            Icon = (System.Drawing.Icon)resources.GetObject("$this.Icon");
             Name = "ModificacionDatos";
             Text = "ModificacionDatos";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
