@@ -36,6 +36,10 @@
             textBox1 = new System.Windows.Forms.TextBox();
             textBox2 = new System.Windows.Forms.TextBox();
             button3 = new System.Windows.Forms.Button();
+            label1 = new System.Windows.Forms.Label();
+            label2 = new System.Windows.Forms.Label();
+            textBox3 = new System.Windows.Forms.TextBox();
+            label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
@@ -78,16 +82,16 @@
             // 
             // textBox1
             // 
-            textBox1.Location = new System.Drawing.Point(353, 110);
+            textBox1.Location = new System.Drawing.Point(191, 108);
             textBox1.Name = "textBox1";
-            textBox1.Size = new System.Drawing.Size(114, 22);
+            textBox1.Size = new System.Drawing.Size(114, 26);
             textBox1.TabIndex = 4;
             // 
             // textBox2
             // 
-            textBox2.Location = new System.Drawing.Point(353, 165);
+            textBox2.Location = new System.Drawing.Point(191, 157);
             textBox2.Name = "textBox2";
-            textBox2.Size = new System.Drawing.Size(114, 22);
+            textBox2.Size = new System.Drawing.Size(114, 26);
             textBox2.TabIndex = 5;
             // 
             // button3
@@ -99,12 +103,50 @@
             button3.Text = "Guardar";
             button3.UseVisualStyleBackColor = true;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new System.Drawing.Point(29, 111);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(128, 18);
+            label1.TabIndex = 7;
+            label1.Text = "Nuevo nombre";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new System.Drawing.Point(29, 160);
+            label2.Name = "label2";
+            label2.Size = new System.Drawing.Size(156, 18);
+            label2.TabIndex = 8;
+            label2.Text = "Nueva contraseña";
+            // 
+            // textBox3
+            // 
+            textBox3.Location = new System.Drawing.Point(621, 160);
+            textBox3.Name = "textBox3";
+            textBox3.Size = new System.Drawing.Size(125, 26);
+            textBox3.TabIndex = 9;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new System.Drawing.Point(396, 164);
+            label3.Name = "label3";
+            label3.Size = new System.Drawing.Size(219, 18);
+            label3.TabIndex = 10;
+            label3.Text = "Repetir nueva contraseña";
+            // 
             // ModificarAdmin
             // 
-            AutoScaleDimensions = new System.Drawing.SizeF(8F, 14F);
+            AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             BackColor = System.Drawing.Color.DarkSlateBlue;
             ClientSize = new System.Drawing.Size(914, 420);
+            Controls.Add(label3);
+            Controls.Add(textBox3);
+            Controls.Add(label2);
+            Controls.Add(label1);
             Controls.Add(button3);
             Controls.Add(textBox2);
             Controls.Add(textBox1);
@@ -131,5 +173,9 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Label label3;
     }
 }
