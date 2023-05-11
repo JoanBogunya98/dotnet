@@ -1,4 +1,5 @@
 ﻿using DotNet_GenteFit.CapaDatos;
+using DotNet_GenteFit.CapaDatos.Entidades;
 using Microsoft.VisualBasic.ApplicationServices;
 using System;
 using System.Collections.Generic;
@@ -15,16 +16,16 @@ namespace DotNet_GenteFit
     public partial class MisCursos : Form
     {
         private readonly CursosDatos _curso;
-
+        private readonly Cliente _cliente;
+        public MisCursos(Cliente cliente) : this()
+        {
+            _cliente = cliente;
+            CargarCursos();
+        }
         public MisCursos()
         {
             InitializeComponent();
             _curso = new CursosDatos();
-        }
-
-        private void MisCursos_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -46,16 +47,7 @@ namespace DotNet_GenteFit
 
         public void CargarCursos()
         {
-            // Falta conseguir el idCliente para pasarlo como argumento a la funcion ObetnerCursosCliente
-            int idCliente = 0;
-            listBox1.DataSource = _curso.ObtenerCursosCliente(idCliente);
-            listBox1.DisplayMember = "NombreActividad";
-            listBox1.ValueMember = "IdActividad";
-        }
-
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            CargarCursos();
+            listBox1.DataSource = _curso.ObtenerCursosCliente(_cliente.IdCliente);
         }
     }
 }

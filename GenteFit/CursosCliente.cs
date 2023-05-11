@@ -1,4 +1,5 @@
 ﻿using DotNet_GenteFit.CapaDatos;
+using DotNet_GenteFit.CapaDatos.Entidades;
 using DotNet_GenteFit.CapaDatos.Infraestructura;
 using System;
 using System.Collections.Generic;
@@ -14,13 +15,18 @@ namespace DotNet_GenteFit
 {
     public partial class CursosCliente : Form
     {
-        private readonly CursosDatos _curso;
+        private readonly CursosDatos _cursosDatos;
+        private readonly Cliente _cliente;
 
+        public CursosCliente(Cliente cliente) : this()
+        {
+            _cliente = cliente;
+        }
         public CursosCliente()
         {
             InitializeComponent();
-            _curso = new CursosDatos();
-
+            _cursosDatos = new CursosDatos();
+            CargarCursos();
         }
 
         private void logout_Click(object sender, EventArgs e)
@@ -42,15 +48,20 @@ namespace DotNet_GenteFit
 
         public void CargarCursos()
         {
-            cursos.DataSource = _curso.ObtenerCursos();
-            cursos.DisplayMember = "NombreActividad";
-            cursos.ValueMember = "IdActividad";
+            cursos.DataSource = _cursosDatos.ObtenerCursos();
         }
 
-
-        private void cursos_SelectedIndexChanged(object sender, EventArgs e)
+        private void cmdSuscribirse_Click(object sender, EventArgs e)
         {
-            CargarCursos();
+            var curso = cursos.SelectedItem as InformacionCurso;
+            if (curso == null)
+            {
+                MessageBox.Show("Tiene que seleccionar un curso para subscribirse", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            _cursosDatos.SubscribirUsuario(_cliente, curso);
+            MessageBox.Show("Subscripcion realizada!", "Ok", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
         }
     }
 }

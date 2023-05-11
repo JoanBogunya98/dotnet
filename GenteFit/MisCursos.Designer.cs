@@ -34,8 +34,10 @@
             button2 = new System.Windows.Forms.Button();
             pictureBox2 = new System.Windows.Forms.PictureBox();
             listBox1 = new System.Windows.Forms.ListBox();
+            pictureBox3 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             SuspendLayout();
             // 
             // pictureBox1
@@ -78,11 +80,20 @@
             // 
             listBox1.FormattingEnabled = true;
             listBox1.ItemHeight = 14;
-            listBox1.Location = new System.Drawing.Point(115, 113);
+            listBox1.Location = new System.Drawing.Point(161, 154);
             listBox1.Name = "listBox1";
-            listBox1.Size = new System.Drawing.Size(589, 116);
+            listBox1.Size = new System.Drawing.Size(558, 116);
             listBox1.TabIndex = 4;
-            listBox1.SelectedIndexChanged += listBox1_SelectedIndexChanged;
+            // 
+            // pictureBox3
+            // 
+            pictureBox3.Image = Properties.Resources.logojpg;
+            pictureBox3.Location = new System.Drawing.Point(18, 54);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new System.Drawing.Size(96, 102);
+            pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            pictureBox3.TabIndex = 7;
+            pictureBox3.TabStop = false;
             // 
             // MisCursos
             // 
@@ -90,6 +101,7 @@
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             BackColor = System.Drawing.Color.DarkSlateBlue;
             ClientSize = new System.Drawing.Size(914, 420);
+            Controls.Add(pictureBox3);
             Controls.Add(listBox1);
             Controls.Add(pictureBox2);
             Controls.Add(button2);
@@ -99,9 +111,9 @@
             Icon = (System.Drawing.Icon)resources.GetObject("$this.Icon");
             Name = "MisCursos";
             Text = "MisCursos";
-            Load += MisCursos_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ResumeLayout(false);
         }
 
@@ -112,5 +124,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }

@@ -40,7 +40,7 @@ namespace DotNet_GenteFit
 
             if (cliente != null)
             {
-                MenuCliente MenuCliente = new MenuCliente();
+                MenuCliente MenuCliente = new MenuCliente(cliente);
 
                 this.Hide();
 

@@ -40,8 +40,10 @@
             label2 = new System.Windows.Forms.Label();
             textBox3 = new System.Windows.Forms.TextBox();
             label3 = new System.Windows.Forms.Label();
+            pictureBox3 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             SuspendLayout();
             // 
             // pictureBox1
@@ -82,21 +84,21 @@
             // 
             // textBox1
             // 
-            textBox1.Location = new System.Drawing.Point(191, 108);
+            textBox1.Location = new System.Drawing.Point(568, 126);
             textBox1.Name = "textBox1";
-            textBox1.Size = new System.Drawing.Size(114, 26);
+            textBox1.Size = new System.Drawing.Size(124, 22);
             textBox1.TabIndex = 4;
             // 
             // textBox2
             // 
-            textBox2.Location = new System.Drawing.Point(191, 157);
+            textBox2.Location = new System.Drawing.Point(568, 175);
             textBox2.Name = "textBox2";
-            textBox2.Size = new System.Drawing.Size(114, 26);
+            textBox2.Size = new System.Drawing.Size(125, 22);
             textBox2.TabIndex = 5;
             // 
             // button3
             // 
-            button3.Location = new System.Drawing.Point(353, 244);
+            button3.Location = new System.Drawing.Point(442, 282);
             button3.Name = "button3";
             button3.Size = new System.Drawing.Size(115, 47);
             button3.TabIndex = 6;
@@ -106,43 +108,54 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new System.Drawing.Point(29, 111);
+            label1.Location = new System.Drawing.Point(369, 129);
             label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(128, 18);
+            label1.Size = new System.Drawing.Size(103, 14);
             label1.TabIndex = 7;
             label1.Text = "Nuevo nombre";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new System.Drawing.Point(29, 160);
+            label2.Location = new System.Drawing.Point(369, 178);
             label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(156, 18);
+            label2.Size = new System.Drawing.Size(126, 14);
             label2.TabIndex = 8;
             label2.Text = "Nueva contraseña";
             // 
             // textBox3
             // 
-            textBox3.Location = new System.Drawing.Point(621, 160);
+            textBox3.Location = new System.Drawing.Point(568, 219);
             textBox3.Name = "textBox3";
-            textBox3.Size = new System.Drawing.Size(125, 26);
+            textBox3.Size = new System.Drawing.Size(125, 22);
             textBox3.TabIndex = 9;
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new System.Drawing.Point(396, 164);
+            label3.Location = new System.Drawing.Point(369, 222);
             label3.Name = "label3";
-            label3.Size = new System.Drawing.Size(219, 18);
+            label3.Size = new System.Drawing.Size(176, 14);
             label3.TabIndex = 10;
             label3.Text = "Repetir nueva contraseña";
             // 
+            // pictureBox3
+            // 
+            pictureBox3.Image = Properties.Resources.logojpg;
+            pictureBox3.Location = new System.Drawing.Point(19, 76);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new System.Drawing.Size(96, 102);
+            pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            pictureBox3.TabIndex = 11;
+            pictureBox3.TabStop = false;
+            // 
             // ModificarAdmin
             // 
-            AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
+            AutoScaleDimensions = new System.Drawing.SizeF(8F, 14F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             BackColor = System.Drawing.Color.DarkSlateBlue;
             ClientSize = new System.Drawing.Size(914, 420);
+            Controls.Add(pictureBox3);
             Controls.Add(label3);
             Controls.Add(textBox3);
             Controls.Add(label2);
@@ -160,6 +173,7 @@
             Text = "ModificarAdmin";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -177,5 +191,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }

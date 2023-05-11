@@ -36,8 +36,10 @@
             button5 = new System.Windows.Forms.Button();
             textBox1 = new System.Windows.Forms.TextBox();
             textBox2 = new System.Windows.Forms.TextBox();
+            pictureBox3 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             SuspendLayout();
             // 
             // pictureBox1
@@ -99,12 +101,23 @@
             textBox2.Size = new System.Drawing.Size(114, 22);
             textBox2.TabIndex = 8;
             // 
+            // pictureBox3
+            // 
+            pictureBox3.Image = Properties.Resources.logojpg;
+            pictureBox3.Location = new System.Drawing.Point(19, 51);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new System.Drawing.Size(96, 102);
+            pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            pictureBox3.TabIndex = 9;
+            pictureBox3.TabStop = false;
+            // 
             // ModificacionDatos
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(8F, 14F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             BackColor = System.Drawing.Color.DarkSlateBlue;
             ClientSize = new System.Drawing.Size(914, 420);
+            Controls.Add(pictureBox3);
             Controls.Add(textBox2);
             Controls.Add(textBox1);
             Controls.Add(button5);
@@ -118,6 +131,7 @@
             Text = "ModificacionDatos";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -131,5 +145,6 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }

@@ -21,7 +21,7 @@ namespace DotNet_GenteFit
         {
             InitializeComponent();
             _curso = new CursosDatos();
-
+           
         }
 
         public void CargarCursos()

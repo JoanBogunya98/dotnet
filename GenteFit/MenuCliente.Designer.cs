@@ -35,8 +35,10 @@
             listAllCursos = new System.Windows.Forms.Button();
             listMyCursos = new System.Windows.Forms.Button();
             ModificarDatos = new System.Windows.Forms.Button();
+            pictureBox3 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             SuspendLayout();
             // 
             // Logout
@@ -96,12 +98,23 @@
             ModificarDatos.UseVisualStyleBackColor = true;
             ModificarDatos.Click += ModificarDatos_Click;
             // 
+            // pictureBox3
+            // 
+            pictureBox3.Image = Properties.Resources.logojpg;
+            pictureBox3.Location = new System.Drawing.Point(17, 50);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new System.Drawing.Size(96, 102);
+            pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            pictureBox3.TabIndex = 7;
+            pictureBox3.TabStop = false;
+            // 
             // MenuCliente
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(8F, 14F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             BackColor = System.Drawing.Color.DarkSlateBlue;
             ClientSize = new System.Drawing.Size(796, 411);
+            Controls.Add(pictureBox3);
             Controls.Add(ModificarDatos);
             Controls.Add(listMyCursos);
             Controls.Add(listAllCursos);
@@ -114,6 +127,7 @@
             Text = "MenuCliente";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ResumeLayout(false);
         }
 
@@ -125,5 +139,6 @@
         private System.Windows.Forms.Button listAllCursos;
         private System.Windows.Forms.Button listMyCursos;
         private System.Windows.Forms.Button ModificarDatos;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }

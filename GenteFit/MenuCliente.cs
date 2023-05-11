@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DotNet_GenteFit.CapaDatos.Entidades;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,13 @@ namespace DotNet_GenteFit
 {
     public partial class MenuCliente : Form
     {
+        private readonly Cliente _cliente;
+
+        public MenuCliente(Cliente cliente) : this()
+        {
+            _cliente = cliente;
+        }
+
         public MenuCliente()
         {
             InitializeComponent();
@@ -37,7 +45,7 @@ namespace DotNet_GenteFit
 
         private void listAllCursos_Click(object sender, EventArgs e)
         {
-            CursosCliente cursosCliente = new CursosCliente();
+            CursosCliente cursosCliente = new CursosCliente(_cliente);
 
             this.Hide();
 
@@ -46,7 +54,7 @@ namespace DotNet_GenteFit
 
         private void listMyCursos_Click(object sender, EventArgs e)
         {
-            MisCursos misCursos = new MisCursos();
+            MisCursos misCursos = new MisCursos(_cliente);
 
             this.Hide();
 

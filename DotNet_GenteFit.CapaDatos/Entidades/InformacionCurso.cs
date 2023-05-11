@@ -2,15 +2,17 @@
 
 namespace DotNet_GenteFit.CapaDatos
 {
-    public class InformacionCurso
+    public record InformacionCurso(
+        int IdActividad, 
+        string NombreActividad, 
+        string NombreEspecialidad,
+        int IdHorario,
+        DateTime Dia, 
+        TimeSpan HoraInicio,
+        TimeSpan HoraFin, 
+        string NombreMonitor, 
+        string NombreSala)
     {
-        public int IdActividad { get; set; }
-        public string NombreActividad { get; set; }
-        public string NombreEspecialidad { get; set; }
-        public DateTime Dia { get; set; }
-        public TimeSpan HoraInicio { get; set; }
-        public TimeSpan HoraFin { get; set; }
-        public string NombreMonitor { get; set; }
-        public string NombreSala { get; set; }
+        public override string ToString() => $"{Dia:d} - {HoraInicio:g} a {HoraFin:g} - {NombreMonitor} - {NombreSala}";
     }
 }

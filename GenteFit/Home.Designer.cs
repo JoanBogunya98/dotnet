@@ -34,7 +34,9 @@
             textBox2 = new System.Windows.Forms.TextBox();
             login = new System.Windows.Forms.Button();
             registrarse = new System.Windows.Forms.Button();
+            pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
             // pictureBox1
@@ -71,9 +73,9 @@
             // login
             // 
             login.BackColor = System.Drawing.Color.LavenderBlush;
-            login.Location = new System.Drawing.Point(288, 166);
+            login.Location = new System.Drawing.Point(288, 160);
             login.Name = "login";
-            login.Size = new System.Drawing.Size(114, 21);
+            login.Size = new System.Drawing.Size(124, 33);
             login.TabIndex = 3;
             login.Text = "Iniciar sesión";
             login.UseVisualStyleBackColor = false;
@@ -83,18 +85,29 @@
             // 
             registrarse.Location = new System.Drawing.Point(288, 208);
             registrarse.Name = "registrarse";
-            registrarse.Size = new System.Drawing.Size(114, 21);
+            registrarse.Size = new System.Drawing.Size(124, 33);
             registrarse.TabIndex = 4;
             registrarse.Text = "Registrarse";
             registrarse.UseVisualStyleBackColor = true;
             registrarse.Click += button2_Click;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.Image = Properties.Resources.logojpg;
+            pictureBox2.Location = new System.Drawing.Point(27, 45);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new System.Drawing.Size(96, 102);
+            pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            pictureBox2.TabIndex = 5;
+            pictureBox2.TabStop = false;
             // 
             // Home
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(8F, 14F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             BackColor = System.Drawing.Color.DarkSlateBlue;
-            ClientSize = new System.Drawing.Size(684, 411);
+            ClientSize = new System.Drawing.Size(700, 442);
+            Controls.Add(pictureBox2);
             Controls.Add(registrarse);
             Controls.Add(login);
             Controls.Add(textBox2);
@@ -106,6 +119,7 @@
             Text = "Home";
             Load += FormInicio_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -117,5 +131,6 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button login;
         private System.Windows.Forms.Button registrarse;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

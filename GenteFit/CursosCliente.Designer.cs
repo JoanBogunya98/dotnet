@@ -34,8 +34,11 @@
             logout = new System.Windows.Forms.Button();
             menu = new System.Windows.Forms.Button();
             cursos = new System.Windows.Forms.ListBox();
+            pictureBox3 = new System.Windows.Forms.PictureBox();
+            cmdSuscribirse = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             SuspendLayout();
             // 
             // pictureBox1
@@ -78,11 +81,30 @@
             // 
             cursos.FormattingEnabled = true;
             cursos.ItemHeight = 14;
-            cursos.Location = new System.Drawing.Point(121, 109);
+            cursos.Location = new System.Drawing.Point(129, 67);
             cursos.Name = "cursos";
-            cursos.Size = new System.Drawing.Size(681, 158);
+            cursos.Size = new System.Drawing.Size(738, 298);
             cursos.TabIndex = 4;
-            cursos.SelectedIndexChanged += cursos_SelectedIndexChanged;
+            // 
+            // pictureBox3
+            // 
+            pictureBox3.Image = Properties.Resources.logojpg;
+            pictureBox3.Location = new System.Drawing.Point(12, 67);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new System.Drawing.Size(96, 102);
+            pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            pictureBox3.TabIndex = 6;
+            pictureBox3.TabStop = false;
+            // 
+            // cmdSuscribirse
+            // 
+            cmdSuscribirse.Location = new System.Drawing.Point(705, 376);
+            cmdSuscribirse.Name = "cmdSuscribirse";
+            cmdSuscribirse.Size = new System.Drawing.Size(162, 23);
+            cmdSuscribirse.TabIndex = 7;
+            cmdSuscribirse.Text = "Subscribirse";
+            cmdSuscribirse.UseVisualStyleBackColor = true;
+            cmdSuscribirse.Click += cmdSuscribirse_Click;
             // 
             // CursosCliente
             // 
@@ -90,6 +112,8 @@
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             BackColor = System.Drawing.Color.DarkSlateBlue;
             ClientSize = new System.Drawing.Size(914, 420);
+            Controls.Add(cmdSuscribirse);
+            Controls.Add(pictureBox3);
             Controls.Add(cursos);
             Controls.Add(menu);
             Controls.Add(logout);
@@ -101,6 +125,7 @@
             Text = "CursosCliente";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ResumeLayout(false);
         }
 
@@ -111,5 +136,7 @@
         private System.Windows.Forms.Button logout;
         private System.Windows.Forms.Button menu;
         private System.Windows.Forms.ListBox cursos;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Button cmdSuscribirse;
     }
 }

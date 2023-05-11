@@ -35,8 +35,10 @@
             menu = new System.Windows.Forms.Button();
             addCurso = new System.Windows.Forms.Button();
             cursos = new System.Windows.Forms.ListBox();
+            pictureBox3 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             SuspendLayout();
             // 
             // pictureBox1
@@ -89,11 +91,21 @@
             // 
             cursos.FormattingEnabled = true;
             cursos.ItemHeight = 14;
-            cursos.Location = new System.Drawing.Point(107, 104);
+            cursos.Location = new System.Drawing.Point(158, 104);
             cursos.Name = "cursos";
-            cursos.Size = new System.Drawing.Size(671, 144);
+            cursos.Size = new System.Drawing.Size(620, 144);
             cursos.TabIndex = 5;
             cursos.SelectedIndexChanged += cursos_SelectedIndexChanged;
+            // 
+            // pictureBox3
+            // 
+            pictureBox3.Image = Properties.Resources.logojpg;
+            pictureBox3.Location = new System.Drawing.Point(18, 52);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new System.Drawing.Size(96, 102);
+            pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            pictureBox3.TabIndex = 6;
+            pictureBox3.TabStop = false;
             // 
             // CursosAdmin
             // 
@@ -101,6 +113,7 @@
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             BackColor = System.Drawing.Color.DarkSlateBlue;
             ClientSize = new System.Drawing.Size(914, 420);
+            Controls.Add(pictureBox3);
             Controls.Add(cursos);
             Controls.Add(addCurso);
             Controls.Add(menu);
@@ -113,6 +126,7 @@
             Text = "CursosAdmin";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ResumeLayout(false);
         }
 
@@ -124,5 +138,6 @@
         private System.Windows.Forms.Button menu;
         private System.Windows.Forms.Button addCurso;
         private System.Windows.Forms.ListBox cursos;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }

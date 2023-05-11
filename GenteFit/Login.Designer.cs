@@ -35,8 +35,10 @@
             registrarse = new System.Windows.Forms.Button();
             textBoxContraseña = new System.Windows.Forms.TextBox();
             textBoxUsuario = new System.Windows.Forms.TextBox();
+            pictureBox3 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             SuspendLayout();
             // 
             // pictureBox1
@@ -91,12 +93,23 @@
             textBoxUsuario.Size = new System.Drawing.Size(154, 22);
             textBoxUsuario.TabIndex = 6;
             // 
+            // pictureBox3
+            // 
+            pictureBox3.Image = Properties.Resources.logojpg;
+            pictureBox3.Location = new System.Drawing.Point(17, 49);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new System.Drawing.Size(96, 102);
+            pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            pictureBox3.TabIndex = 7;
+            pictureBox3.TabStop = false;
+            // 
             // Login
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(8F, 14F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             BackColor = System.Drawing.Color.DarkSlateBlue;
             ClientSize = new System.Drawing.Size(750, 420);
+            Controls.Add(pictureBox3);
             Controls.Add(textBoxUsuario);
             Controls.Add(textBoxContraseña);
             Controls.Add(registrarse);
@@ -109,6 +122,7 @@
             Text = "Login";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -121,5 +135,6 @@
         private System.Windows.Forms.Button registrarse;
         private System.Windows.Forms.TextBox textBoxContraseña;
         private System.Windows.Forms.TextBox textBoxUsuario;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }
