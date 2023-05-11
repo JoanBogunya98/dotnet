@@ -80,15 +80,15 @@
             // 
             listBox1.FormattingEnabled = true;
             listBox1.ItemHeight = 14;
-            listBox1.Location = new System.Drawing.Point(161, 154);
+            listBox1.Location = new System.Drawing.Point(139, 66);
             listBox1.Name = "listBox1";
-            listBox1.Size = new System.Drawing.Size(558, 116);
+            listBox1.Size = new System.Drawing.Size(738, 312);
             listBox1.TabIndex = 4;
             // 
             // pictureBox3
             // 
             pictureBox3.Image = Properties.Resources.logojpg;
-            pictureBox3.Location = new System.Drawing.Point(18, 54);
+            pictureBox3.Location = new System.Drawing.Point(18, 66);
             pictureBox3.Name = "pictureBox3";
             pictureBox3.Size = new System.Drawing.Size(96, 102);
             pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
