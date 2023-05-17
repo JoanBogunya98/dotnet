@@ -39,7 +39,7 @@ namespace DotNet_GenteFit
 
         private void menu_Click(object sender, EventArgs e)
         {
-            MenuCliente menuCliente = new MenuCliente();
+            MenuCliente menuCliente = new MenuCliente(_cliente);
 
             this.Hide();
 

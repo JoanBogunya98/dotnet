@@ -37,10 +37,18 @@ namespace DotNet_GenteFit
 
         private void Logout_Click(object sender, EventArgs e)
         {
+            var list = new List<Form>();
             foreach (Form form in Application.OpenForms)
             {
-                form.Close();
+                list.Add(form);
             }
+            list.ForEach(n => {
+                if (n is Home) 
+                    n.Show();
+                else 
+                    n.Close(); 
+            });
+            
         }
 
         private void listAllCursos_Click(object sender, EventArgs e)
