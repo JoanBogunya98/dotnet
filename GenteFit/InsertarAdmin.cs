@@ -10,30 +10,21 @@ using System.Windows.Forms;
 
 namespace DotNet_GenteFit
 {
-    public partial class ModificarAdmin : Form
+    public partial class InsertarAdmin : Form
     {
-        public ModificarAdmin()
+        public InsertarAdmin()
         {
             InitializeComponent();
         }
 
-        private void logout_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            foreach (Form form in Application.OpenForms)
-            {
-                form.Close();
-            }
+
         }
 
-        private void menu_Click(object sender, EventArgs e)
+        private void InsertarAdmin_Load(object sender, EventArgs e)
         {
-            MenuAdministrador menuAdministrador = new MenuAdministrador();
 
-            this.Hide();
-
-            menuAdministrador.Show();
         }
-
-
     }
 }

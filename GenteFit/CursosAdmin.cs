@@ -59,13 +59,20 @@ namespace DotNet_GenteFit
 
         private void addCurso_Click(object sender, EventArgs e)
         {
+            InsertarAdmin insertarAdmin = new InsertarAdmin();
+
+            this.Hide();
+
+            insertarAdmin.Show();
+        }
+
+        private void modificarCurso_Click(object sender, EventArgs e)
+        {
             ModificarAdmin modificarAdmin = new ModificarAdmin();
 
             this.Hide();
 
             modificarAdmin.Show();
         }
-
-
     }
 }

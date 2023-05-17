@@ -92,10 +92,10 @@
             // cursos
             // 
             cursos.FormattingEnabled = true;
-            cursos.ItemHeight = 14;
+            cursos.ItemHeight = 18;
             cursos.Location = new System.Drawing.Point(158, 104);
             cursos.Name = "cursos";
-            cursos.Size = new System.Drawing.Size(620, 144);
+            cursos.Size = new System.Drawing.Size(620, 130);
             cursos.TabIndex = 5;
             cursos.SelectedIndexChanged += cursos_SelectedIndexChanged;
             // 
@@ -117,6 +117,7 @@
             modificarCurso.TabIndex = 7;
             modificarCurso.Text = "Modificar Curso";
             modificarCurso.UseVisualStyleBackColor = true;
+            modificarCurso.Click += modificarCurso_Click;
             // 
             // eliminarCurso
             // 
@@ -129,7 +130,7 @@
             // 
             // CursosAdmin
             // 
-            AutoScaleDimensions = new System.Drawing.SizeF(8F, 14F);
+            AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             BackColor = System.Drawing.Color.DarkSlateBlue;
             ClientSize = new System.Drawing.Size(914, 420);
