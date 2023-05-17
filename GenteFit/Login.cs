@@ -50,11 +50,11 @@ namespace DotNet_GenteFit
             else if (admin != null)
             {
 
-                MenuAdministrador MenuAdministrador = new MenuAdministrador();
+                CursosAdmin cursosAdmin = new CursosAdmin();
 
                 this.Hide();
 
-                MenuAdministrador.Show();
+                cursosAdmin.Show();
             }
             else
             {

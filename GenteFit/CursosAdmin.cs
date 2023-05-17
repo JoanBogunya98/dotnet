@@ -21,7 +21,7 @@ namespace DotNet_GenteFit
         {
             InitializeComponent();
             _curso = new CursosDatos();
-           
+
         }
 
         public void CargarCursos()
@@ -65,5 +65,7 @@ namespace DotNet_GenteFit
 
             modificarAdmin.Show();
         }
+
+
     }
 }

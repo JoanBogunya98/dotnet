@@ -1,6 +1,6 @@
 ﻿namespace DotNet_GenteFit
 {
-    partial class ModificarAdmin
+    partial class InsertarAdmin
     {
         /// <summary>
         /// Required designer variable.
@@ -56,7 +56,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
-            SuspendLayout();
+            
             // 
             // pictureBox1
             // 
