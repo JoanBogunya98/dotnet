@@ -45,16 +45,15 @@ namespace DotNet_GenteFit
             {
                 form.Close();
             }
-
         }
 
         private void menu_Click(object sender, EventArgs e)
         {
-            MenuAdministrador menuAdministrador = new MenuAdministrador();
+            CursosAdmin CursosAdmin = new CursosAdmin();
 
             this.Hide();
 
-            menuAdministrador.Show();
+            CursosAdmin.Show();
         }
 
         private void addCurso_Click(object sender, EventArgs e)
@@ -74,5 +73,16 @@ namespace DotNet_GenteFit
 
             modificarAdmin.Show();
         }
+
+        /*private void eliminarCurso_Click(object sender, EventArgs e)
+        {
+            ModificarAdmin eliminarAdmin = new EliminarAdmin();
+
+            this.Hide();
+
+            eliminarAdmin.Show();
+        }*/
+
     }
+
 }

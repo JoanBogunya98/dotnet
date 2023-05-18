@@ -49,5 +49,10 @@ namespace DotNet_GenteFit
         {
             listBox1.DataSource = _curso.ObtenerCursosCliente(_cliente.IdCliente);
         }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

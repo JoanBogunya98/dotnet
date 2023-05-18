@@ -27,13 +27,17 @@ namespace DotNet_GenteFit
 
         private void menu_Click(object sender, EventArgs e)
         {
-            MenuAdministrador menuAdministrador = new MenuAdministrador();
+            CursosAdmin CursosAdmin = new CursosAdmin();
 
             this.Hide();
 
-            menuAdministrador.Show();
+            CursosAdmin.Show();
         }
 
+        private void guardar_Click(object sender, EventArgs e)
+        {
+        }
 
     }
+
 }

@@ -17,14 +17,27 @@ namespace DotNet_GenteFit
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void logout_Click(object sender, EventArgs e)
         {
-
+            foreach (Form form in Application.OpenForms)
+            {
+                form.Close();
+            }
         }
 
-        private void InsertarAdmin_Load(object sender, EventArgs e)
+        private void menu_Click(object sender, EventArgs e)
         {
+            CursosAdmin CursosAdmin = new CursosAdmin();
 
+            this.Hide();
+
+            CursosAdmin.Show();
         }
+
+        private void guardar_Click(object sender, EventArgs e)
+        {
+        }
+
     }
+
 }
