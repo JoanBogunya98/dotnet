@@ -33,7 +33,7 @@
             logout = new System.Windows.Forms.Button();
             menu = new System.Windows.Forms.Button();
             pictureBox2 = new System.Windows.Forms.PictureBox();
-            guardar = new System.Windows.Forms.Button();
+            cmdGuardar = new System.Windows.Forms.Button();
             pictureBox3 = new System.Windows.Forms.PictureBox();
             IdActividad = new System.Windows.Forms.Label();
             NombreActividad = new System.Windows.Forms.Label();
@@ -42,17 +42,15 @@
             Dia = new System.Windows.Forms.Label();
             HoraInicio = new System.Windows.Forms.Label();
             HoraFin = new System.Windows.Forms.Label();
-            NombreMonitor = new System.Windows.Forms.Label();
             NombreSala = new System.Windows.Forms.Label();
-            textBox1 = new System.Windows.Forms.TextBox();
-            textBox2 = new System.Windows.Forms.TextBox();
-            textBox3 = new System.Windows.Forms.TextBox();
-            textBox4 = new System.Windows.Forms.TextBox();
-            textBox5 = new System.Windows.Forms.TextBox();
-            dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            textBox6 = new System.Windows.Forms.TextBox();
-            textBox7 = new System.Windows.Forms.TextBox();
-            textBox8 = new System.Windows.Forms.TextBox();
+            txtIdHorario = new System.Windows.Forms.TextBox();
+            txtCapacidadMaxima = new System.Windows.Forms.TextBox();
+            dtDia = new System.Windows.Forms.DateTimePicker();
+            cboMonitores = new System.Windows.Forms.ComboBox();
+            cboActividades = new System.Windows.Forms.ComboBox();
+            cboSalas = new System.Windows.Forms.ComboBox();
+            dtHoraInicio = new System.Windows.Forms.DateTimePicker();
+            dtHoraFin = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -94,14 +92,15 @@
             pictureBox2.TabIndex = 3;
             pictureBox2.TabStop = false;
             // 
-            // guardar
+            // cmdGuardar
             // 
-            guardar.Location = new System.Drawing.Point(319, 327);
-            guardar.Name = "guardar";
-            guardar.Size = new System.Drawing.Size(115, 47);
-            guardar.TabIndex = 6;
-            guardar.Text = "Guardar";
-            guardar.UseVisualStyleBackColor = true;
+            cmdGuardar.Location = new System.Drawing.Point(427, 293);
+            cmdGuardar.Name = "cmdGuardar";
+            cmdGuardar.Size = new System.Drawing.Size(115, 47);
+            cmdGuardar.TabIndex = 9;
+            cmdGuardar.Text = "Guardar";
+            cmdGuardar.UseVisualStyleBackColor = true;
+            cmdGuardar.Click += cmdGuardar_Click;
             // 
             // pictureBox3
             // 
@@ -125,34 +124,34 @@
             // NombreActividad
             // 
             NombreActividad.AutoSize = true;
-            NombreActividad.Location = new System.Drawing.Point(169, 149);
+            NombreActividad.Location = new System.Drawing.Point(169, 234);
             NombreActividad.Name = "NombreActividad";
-            NombreActividad.Size = new System.Drawing.Size(59, 14);
+            NombreActividad.Size = new System.Drawing.Size(130, 14);
             NombreActividad.TabIndex = 13;
-            NombreActividad.Text = "Nombre";
+            NombreActividad.Text = "Capacidad Máxima";
             // 
             // NombreEspecialidad
             // 
             NombreEspecialidad.AutoSize = true;
-            NombreEspecialidad.Location = new System.Drawing.Point(169, 197);
+            NombreEspecialidad.Location = new System.Drawing.Point(169, 145);
             NombreEspecialidad.Name = "NombreEspecialidad";
-            NombreEspecialidad.Size = new System.Drawing.Size(89, 14);
+            NombreEspecialidad.Size = new System.Drawing.Size(57, 14);
             NombreEspecialidad.TabIndex = 14;
-            NombreEspecialidad.Text = "Especialidad";
+            NombreEspecialidad.Text = "Monitor";
             // 
             // IdHorario
             // 
             IdHorario.AutoSize = true;
-            IdHorario.Location = new System.Drawing.Point(169, 238);
+            IdHorario.Location = new System.Drawing.Point(169, 191);
             IdHorario.Name = "IdHorario";
-            IdHorario.Size = new System.Drawing.Size(57, 14);
+            IdHorario.Size = new System.Drawing.Size(68, 14);
             IdHorario.TabIndex = 15;
-            IdHorario.Text = "Horario";
+            IdHorario.Text = "Actividad";
             // 
             // Dia
             // 
             Dia.AutoSize = true;
-            Dia.Location = new System.Drawing.Point(527, 101);
+            Dia.Location = new System.Drawing.Point(554, 106);
             Dia.Name = "Dia";
             Dia.Size = new System.Drawing.Size(29, 14);
             Dia.TabIndex = 16;
@@ -161,7 +160,7 @@
             // HoraInicio
             // 
             HoraInicio.AutoSize = true;
-            HoraInicio.Location = new System.Drawing.Point(527, 149);
+            HoraInicio.Location = new System.Drawing.Point(554, 146);
             HoraInicio.Name = "HoraInicio";
             HoraInicio.Size = new System.Drawing.Size(78, 14);
             HoraInicio.TabIndex = 17;
@@ -170,110 +169,106 @@
             // HoraFin
             // 
             HoraFin.AutoSize = true;
-            HoraFin.Location = new System.Drawing.Point(527, 197);
+            HoraFin.Location = new System.Drawing.Point(554, 191);
             HoraFin.Name = "HoraFin";
             HoraFin.Size = new System.Drawing.Size(60, 14);
             HoraFin.TabIndex = 18;
             HoraFin.Text = "Hora fin";
             // 
-            // NombreMonitor
-            // 
-            NombreMonitor.AutoSize = true;
-            NombreMonitor.Location = new System.Drawing.Point(527, 238);
-            NombreMonitor.Name = "NombreMonitor";
-            NombreMonitor.Size = new System.Drawing.Size(57, 14);
-            NombreMonitor.TabIndex = 19;
-            NombreMonitor.Text = "Monitor";
-            // 
             // NombreSala
             // 
             NombreSala.AutoSize = true;
-            NombreSala.Location = new System.Drawing.Point(527, 280);
+            NombreSala.Location = new System.Drawing.Point(554, 234);
             NombreSala.Name = "NombreSala";
             NombreSala.Size = new System.Drawing.Size(36, 14);
             NombreSala.TabIndex = 20;
             NombreSala.Text = "Sala";
             // 
-            // textBox1
+            // txtIdHorario
             // 
-            textBox1.Location = new System.Drawing.Point(282, 98);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new System.Drawing.Size(100, 22);
-            textBox1.TabIndex = 21;
+            txtIdHorario.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            txtIdHorario.Location = new System.Drawing.Point(317, 98);
+            txtIdHorario.Name = "txtIdHorario";
+            txtIdHorario.ReadOnly = true;
+            txtIdHorario.Size = new System.Drawing.Size(100, 22);
+            txtIdHorario.TabIndex = 0;
             // 
-            // textBox2
+            // txtCapacidadMaxima
             // 
-            textBox2.Location = new System.Drawing.Point(282, 141);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new System.Drawing.Size(100, 22);
-            textBox2.TabIndex = 22;
+            txtCapacidadMaxima.Location = new System.Drawing.Point(317, 230);
+            txtCapacidadMaxima.Name = "txtCapacidadMaxima";
+            txtCapacidadMaxima.Size = new System.Drawing.Size(100, 22);
+            txtCapacidadMaxima.TabIndex = 1;
             // 
-            // textBox3
+            // dtDia
             // 
-            textBox3.Location = new System.Drawing.Point(282, 189);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new System.Drawing.Size(100, 22);
-            textBox3.TabIndex = 23;
+            dtDia.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            dtDia.Location = new System.Drawing.Point(659, 100);
+            dtDia.Name = "dtDia";
+            dtDia.Size = new System.Drawing.Size(142, 22);
+            dtDia.TabIndex = 4;
             // 
-            // textBox4
+            // cboMonitores
             // 
-            textBox4.Location = new System.Drawing.Point(632, 272);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new System.Drawing.Size(100, 22);
-            textBox4.TabIndex = 24;
+            cboMonitores.FormattingEnabled = true;
+            cboMonitores.Location = new System.Drawing.Point(317, 142);
+            cboMonitores.Name = "cboMonitores";
+            cboMonitores.Size = new System.Drawing.Size(220, 22);
+            cboMonitores.TabIndex = 21;
             // 
-            // textBox5
+            // cboActividades
             // 
-            textBox5.Location = new System.Drawing.Point(632, 230);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new System.Drawing.Size(100, 22);
-            textBox5.TabIndex = 25;
+            cboActividades.FormattingEnabled = true;
+            cboActividades.Location = new System.Drawing.Point(317, 183);
+            cboActividades.Name = "cboActividades";
+            cboActividades.Size = new System.Drawing.Size(220, 22);
+            cboActividades.TabIndex = 22;
             // 
-            // dateTimePicker1
+            // cboSalas
             // 
-            dateTimePicker1.Location = new System.Drawing.Point(632, 98);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new System.Drawing.Size(200, 22);
-            dateTimePicker1.TabIndex = 26;
+            cboSalas.FormattingEnabled = true;
+            cboSalas.Location = new System.Drawing.Point(659, 230);
+            cboSalas.Name = "cboSalas";
+            cboSalas.Size = new System.Drawing.Size(142, 22);
+            cboSalas.TabIndex = 23;
             // 
-            // textBox6
+            // dtHoraInicio
             // 
-            textBox6.Location = new System.Drawing.Point(632, 149);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new System.Drawing.Size(100, 22);
-            textBox6.TabIndex = 27;
+            dtHoraInicio.CustomFormat = "HH:mm";
+            dtHoraInicio.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            dtHoraInicio.Location = new System.Drawing.Point(659, 140);
+            dtHoraInicio.Name = "dtHoraInicio";
+            dtHoraInicio.ShowUpDown = true;
+            dtHoraInicio.Size = new System.Drawing.Size(100, 22);
+            dtHoraInicio.TabIndex = 24;
+            dtHoraInicio.Value = new System.DateTime(2023, 5, 19, 13, 54, 0, 0);
             // 
-            // textBox7
+            // dtHoraFin
             // 
-            textBox7.Location = new System.Drawing.Point(282, 230);
-            textBox7.Name = "textBox7";
-            textBox7.Size = new System.Drawing.Size(100, 22);
-            textBox7.TabIndex = 28;
-            // 
-            // textBox8
-            // 
-            textBox8.Location = new System.Drawing.Point(632, 189);
-            textBox8.Name = "textBox8";
-            textBox8.Size = new System.Drawing.Size(100, 22);
-            textBox8.TabIndex = 29;
+            dtHoraFin.CustomFormat = "HH:mm";
+            dtHoraFin.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            dtHoraFin.Location = new System.Drawing.Point(659, 183);
+            dtHoraFin.Name = "dtHoraFin";
+            dtHoraFin.ShowUpDown = true;
+            dtHoraFin.Size = new System.Drawing.Size(100, 22);
+            dtHoraFin.TabIndex = 25;
+            dtHoraFin.Value = new System.DateTime(2023, 5, 19, 13, 5, 0, 0);
             // 
             // ModificarAdmin
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(8F, 14F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             BackColor = System.Drawing.Color.DarkSlateBlue;
-            ClientSize = new System.Drawing.Size(914, 420);
-            Controls.Add(textBox8);
-            Controls.Add(textBox7);
-            Controls.Add(textBox6);
-            Controls.Add(dateTimePicker1);
-            Controls.Add(textBox5);
-            Controls.Add(textBox4);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            ClientSize = new System.Drawing.Size(914, 362);
+            Controls.Add(dtHoraFin);
+            Controls.Add(dtHoraInicio);
+            Controls.Add(cboSalas);
+            Controls.Add(cboActividades);
+            Controls.Add(cboMonitores);
+            Controls.Add(dtDia);
+            Controls.Add(txtCapacidadMaxima);
+            Controls.Add(txtIdHorario);
             Controls.Add(NombreSala);
-            Controls.Add(NombreMonitor);
             Controls.Add(HoraFin);
             Controls.Add(HoraInicio);
             Controls.Add(Dia);
@@ -282,7 +277,7 @@
             Controls.Add(NombreActividad);
             Controls.Add(IdActividad);
             Controls.Add(pictureBox3);
-            Controls.Add(guardar);
+            Controls.Add(cmdGuardar);
             Controls.Add(pictureBox2);
             Controls.Add(menu);
             Controls.Add(logout);
@@ -290,6 +285,7 @@
             Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             Icon = (System.Drawing.Icon)resources.GetObject("$this.Icon");
             Name = "ModificarAdmin";
+            StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             Text = "ModificarAdmin";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
@@ -313,17 +309,17 @@
         private System.Windows.Forms.Label Dia;
         private System.Windows.Forms.Label HoraInicio;
         private System.Windows.Forms.Label HoraFin;
-        private System.Windows.Forms.Label NombreMonitor;
         private System.Windows.Forms.Label NombreSala;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.TextBox txtIdHorario;
+        private System.Windows.Forms.TextBox txtCapacidadMaxima;
+        private System.Windows.Forms.DateTimePicker dtDia;
         private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.Button guardar;
+        private System.Windows.Forms.Button cmdGuardar;
+        private System.Windows.Forms.ComboBox cboMonitores;
+        private System.Windows.Forms.ComboBox cboActividades;
+        private System.Windows.Forms.ComboBox cboSalas;
+        private System.Windows.Forms.DateTimePicker dtHoraInicio;
+        private System.Windows.Forms.DateTimePicker dtHoraFin;
     }
 }

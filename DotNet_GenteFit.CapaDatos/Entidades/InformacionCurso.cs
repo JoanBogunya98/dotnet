@@ -11,7 +11,8 @@ namespace DotNet_GenteFit.CapaDatos
         TimeSpan HoraInicio,
         TimeSpan HoraFin, 
         string NombreMonitor, 
-        string NombreSala)
+        string NombreSala,
+        int IdReserva)
     {
         public override string ToString() => $"{Dia:d} - {HoraInicio:g} a {HoraFin:g} - {NombreMonitor} - {NombreSala}";
     }

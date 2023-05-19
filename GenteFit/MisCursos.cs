@@ -1,5 +1,6 @@
 ﻿using DotNet_GenteFit.CapaDatos;
 using DotNet_GenteFit.CapaDatos.Entidades;
+using DotNet_GenteFit.Servicios;
 using Microsoft.VisualBasic.ApplicationServices;
 using System;
 using System.Collections.Generic;
@@ -16,6 +17,7 @@ namespace DotNet_GenteFit
     public partial class MisCursos : Form
     {
         private readonly CursosDatos _curso;
+        private readonly ServicioNavegacion _navegacion;
         private readonly Cliente _cliente;
         public MisCursos(Cliente cliente) : this()
         {
@@ -26,6 +28,7 @@ namespace DotNet_GenteFit
         {
             InitializeComponent();
             _curso = new CursosDatos();
+            this._navegacion = new ServicioNavegacion();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -39,10 +42,7 @@ namespace DotNet_GenteFit
 
         private void button1_Click(object sender, EventArgs e)
         {
-            foreach (Form form in Application.OpenForms)
-            {
-                form.Close();
-            }
+            _navegacion.Logout();
         }
 
         public void CargarCursos()
@@ -53,6 +53,24 @@ namespace DotNet_GenteFit
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void cmdEliminarSubscripcion_Click(object sender, EventArgs e)
+        {
+            var sub = listBox1.SelectedItem as InformacionCurso;
+            if (sub == null)
+            {
+                MessageBox.Show("Debe seleccionar una subscripción a eliminar");
+            }
+            else
+            {
+                if (MessageBox.Show("Está seguro de querer eliminar la subscripción?", "Eliminar subscripción", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+                {
+                    _curso.EliminarSubscripcion(sub.IdReserva);
+                    CargarCursos();
+                    MessageBox.Show("Subscripción eliminada correctamente");
+                }
+            }
         }
     }
 }

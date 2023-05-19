@@ -92,12 +92,11 @@
             // cursos
             // 
             cursos.FormattingEnabled = true;
-            cursos.ItemHeight = 18;
+            cursos.ItemHeight = 14;
             cursos.Location = new System.Drawing.Point(158, 104);
             cursos.Name = "cursos";
             cursos.Size = new System.Drawing.Size(620, 130);
             cursos.TabIndex = 5;
-            cursos.SelectedIndexChanged += cursos_SelectedIndexChanged;
             // 
             // pictureBox3
             // 
@@ -127,10 +126,11 @@
             eliminarCurso.TabIndex = 8;
             eliminarCurso.Text = "Eliminar Curso";
             eliminarCurso.UseVisualStyleBackColor = true;
+            eliminarCurso.Click += eliminarCurso_Click;
             // 
             // CursosAdmin
             // 
-            AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
+            AutoScaleDimensions = new System.Drawing.SizeF(8F, 14F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             BackColor = System.Drawing.Color.DarkSlateBlue;
             ClientSize = new System.Drawing.Size(914, 420);
@@ -146,6 +146,7 @@
             Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             Icon = (System.Drawing.Icon)resources.GetObject("$this.Icon");
             Name = "CursosAdmin";
+            StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             Text = "CursosAdmin";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();

@@ -50,7 +50,7 @@ namespace DotNet_GenteFit
             else if (admin != null)
             {
 
-                CursosAdmin cursosAdmin = new CursosAdmin();
+                var cursosAdmin = new CursosAdmin(admin);
 
                 this.Hide();
 

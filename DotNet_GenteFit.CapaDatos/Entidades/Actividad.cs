@@ -10,4 +10,9 @@ public partial class Actividad
     public string NombreActividad { get; set; }
 
     public virtual ICollection<Horario> Horarios { get; } = new List<Horario>();
+
+    public override string ToString()
+    {
+        return $"{NombreActividad}";
+    }
 }
