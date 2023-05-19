@@ -80,10 +80,10 @@
             // listBox1
             // 
             listBox1.FormattingEnabled = true;
-            listBox1.ItemHeight = 14;
+            listBox1.ItemHeight = 18;
             listBox1.Location = new System.Drawing.Point(139, 66);
             listBox1.Name = "listBox1";
-            listBox1.Size = new System.Drawing.Size(738, 312);
+            listBox1.Size = new System.Drawing.Size(738, 310);
             listBox1.TabIndex = 4;
             listBox1.SelectedIndexChanged += listBox1_SelectedIndexChanged;
             // 
@@ -99,9 +99,9 @@
             // 
             // cmdEliminarSubscripcion
             // 
-            cmdEliminarSubscripcion.Location = new System.Drawing.Point(718, 385);
+            cmdEliminarSubscripcion.Location = new System.Drawing.Point(665, 385);
             cmdEliminarSubscripcion.Name = "cmdEliminarSubscripcion";
-            cmdEliminarSubscripcion.Size = new System.Drawing.Size(159, 23);
+            cmdEliminarSubscripcion.Size = new System.Drawing.Size(212, 23);
             cmdEliminarSubscripcion.TabIndex = 8;
             cmdEliminarSubscripcion.Text = "Eliminar Subscripcion";
             cmdEliminarSubscripcion.UseVisualStyleBackColor = true;
@@ -109,7 +109,7 @@
             // 
             // MisCursos
             // 
-            AutoScaleDimensions = new System.Drawing.SizeF(8F, 14F);
+            AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             BackColor = System.Drawing.Color.DarkSlateBlue;
             ClientSize = new System.Drawing.Size(914, 420);
