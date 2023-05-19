@@ -1,4 +1,5 @@
 ﻿using DotNet_GenteFit.CapaDatos.Entidades;
+using DotNet_GenteFit.Servicios;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,6 +15,7 @@ namespace DotNet_GenteFit
     public partial class MenuCliente : Form
     {
         private readonly Cliente _cliente;
+        private readonly ServicioNavegacion _navegacion;
 
         public MenuCliente(Cliente cliente) : this()
         {
@@ -22,6 +24,7 @@ namespace DotNet_GenteFit
 
         public MenuCliente()
         {
+            this._navegacion = new ServicioNavegacion();
             InitializeComponent();
         }
 
@@ -37,10 +40,7 @@ namespace DotNet_GenteFit
 
         private void Logout_Click(object sender, EventArgs e)
         {
-            foreach (Form form in Application.OpenForms)
-            {
-                form.Close();
-            }
+            _navegacion.Logout();
         }
 
         private void listAllCursos_Click(object sender, EventArgs e)

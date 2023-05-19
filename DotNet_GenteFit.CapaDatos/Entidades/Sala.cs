@@ -10,4 +10,10 @@ public partial class Sala
     public string NombreSala { get; set; }
 
     public virtual ICollection<Horario> Horarios { get; } = new List<Horario>();
+
+
+    public override string ToString()
+    {
+        return $"{NombreSala}";
+    }
 }

@@ -4,7 +4,7 @@ namespace DotNet_GenteFit.CapaDatos.Infraestructura
 {
     internal class DbFactory : IDbFactory
     {
-        private string connectionString;
+        private readonly string connectionString;
 
         public DbFactory()
         {

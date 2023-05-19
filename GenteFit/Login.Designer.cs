@@ -62,7 +62,7 @@
             IniciarSesion.Location = new System.Drawing.Point(303, 180);
             IniciarSesion.Name = "IniciarSesion";
             IniciarSesion.Size = new System.Drawing.Size(117, 26);
-            IniciarSesion.TabIndex = 3;
+            IniciarSesion.TabIndex = 2;
             IniciarSesion.Text = "Iniciar sesión";
             IniciarSesion.UseVisualStyleBackColor = true;
             IniciarSesion.Click += login_Click;
@@ -72,7 +72,7 @@
             registrarse.Location = new System.Drawing.Point(303, 230);
             registrarse.Name = "registrarse";
             registrarse.Size = new System.Drawing.Size(117, 26);
-            registrarse.TabIndex = 4;
+            registrarse.TabIndex = 3;
             registrarse.Text = "Registrarse";
             registrarse.UseVisualStyleBackColor = true;
             registrarse.Click += registro_Click;
@@ -83,7 +83,7 @@
             textBoxContraseña.Name = "textBoxContraseña";
             textBoxContraseña.PlaceholderText = "Contraseña";
             textBoxContraseña.Size = new System.Drawing.Size(154, 22);
-            textBoxContraseña.TabIndex = 5;
+            textBoxContraseña.TabIndex = 1;
             // 
             // textBoxUsuario
             // 
@@ -91,7 +91,7 @@
             textBoxUsuario.Name = "textBoxUsuario";
             textBoxUsuario.PlaceholderText = "Usuario";
             textBoxUsuario.Size = new System.Drawing.Size(154, 22);
-            textBoxUsuario.TabIndex = 6;
+            textBoxUsuario.TabIndex = 0;
             // 
             // pictureBox3
             // 
@@ -119,6 +119,7 @@
             Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             Icon = (System.Drawing.Icon)resources.GetObject("$this.Icon");
             Name = "Login";
+            StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             Text = "Login";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();

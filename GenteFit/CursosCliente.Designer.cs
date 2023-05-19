@@ -122,6 +122,7 @@
             Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             Icon = (System.Drawing.Icon)resources.GetObject("$this.Icon");
             Name = "CursosCliente";
+            StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             Text = "CursosCliente";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();

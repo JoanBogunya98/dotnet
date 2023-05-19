@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DotNet_GenteFit.Servicios;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,13 @@ namespace DotNet_GenteFit
 {
     public partial class TodosClientes : Form
     {
+        private readonly ServicioNavegacion _navegacion;
+
         public TodosClientes()
         {
             InitializeComponent();
+            this._navegacion = new ServicioNavegacion();
+
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -28,10 +33,7 @@ namespace DotNet_GenteFit
 
         private void button1_Click(object sender, EventArgs e)
         {
-            foreach (Form form in Application.OpenForms)
-            {
-                form.Close();
-            }
+            _navegacion.Logout();
         }
     }
 }

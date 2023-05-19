@@ -1,5 +1,7 @@
 ﻿using DotNet_GenteFit.CapaDatos;
+using DotNet_GenteFit.CapaDatos.Entidades;
 using DotNet_GenteFit.CapaDatos.Infraestructura;
+using DotNet_GenteFit.Servicios;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,56 +16,84 @@ namespace DotNet_GenteFit
 {
     public partial class CursosAdmin : Form
     {
-        private readonly CursosDatos _curso;
-
+        private readonly CursosDatos _cursos;
+        private readonly ServicioNavegacion _navegacion;
+        private Administrador _admin;
 
         public CursosAdmin()
         {
             InitializeComponent();
-            _curso = new CursosDatos();
-           
+            _cursos = new CursosDatos();
+            CargarCursos();
+            this._navegacion = new ServicioNavegacion();
+        }
+
+        public CursosAdmin(Administrador admin) : this()
+        {
+            this._admin = admin;
         }
 
         public void CargarCursos()
         {
-
-            cursos.DataSource = _curso.ObtenerCursos();
-            cursos.DisplayMember = "NombreActividad";
-            cursos.ValueMember = "IdActividad";
-
-        }
-
-
-        private void cursos_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            CargarCursos();
+            cursos.DataSource = _cursos.ObtenerCursos();
         }
 
         private void logout_Click(object sender, EventArgs e)
         {
-            foreach (Form form in Application.OpenForms)
-            {
-                form.Close();
-            }
-
+            _navegacion.Logout();
         }
 
         private void menu_Click(object sender, EventArgs e)
         {
-            MenuAdministrador menuAdministrador = new MenuAdministrador();
+            CursosAdmin CursosAdmin = new CursosAdmin();
 
             this.Hide();
 
-            menuAdministrador.Show();
+            CursosAdmin.Show();
         }
 
         private void addCurso_Click(object sender, EventArgs e)
         {
-            ModificarAdmin modificarAdmin = new ModificarAdmin();
+            ModificarAdmin modificarAdmin = new ModificarAdmin(_admin);
 
             this.Hide();
 
-            modificarAdmin.Show();
+            modificarAdmin.ShowNewCurso();
+        }
+
+        private void modificarCurso_Click(object sender, EventArgs e)
+        {
+            ModificarAdmin modificarAdmin = new ModificarAdmin(_admin);
+
+            this.Hide();
+            var curso = cursos.SelectedItem as InformacionCurso;
+
+            if (curso == null)
+            {
+                MessageBox.Show("Debe seleccionar un curso para modificar");
+            }
+            else
+            {
+                modificarAdmin.ShowCurso(curso);
+            }
+        }
+
+        private void eliminarCurso_Click(object sender, EventArgs e)
+        {
+            var curso = cursos.SelectedItem as InformacionCurso;
+            if (curso == null)
+            {
+                MessageBox.Show("Debe seleccionar un curso para borrarlo");
+            }
+            else
+            {
+                if (MessageBox.Show("Está seguro de querer borrar el curso?", "Borrar curso", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+                {
+                    _cursos.EliminarHorario(curso.IdHorario);
+                    CargarCursos();
+                    MessageBox.Show("Curso borrado correctamente");
+                }
+            }
         }
     }
 }

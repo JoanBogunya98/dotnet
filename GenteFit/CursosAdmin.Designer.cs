@@ -36,6 +36,8 @@
             addCurso = new System.Windows.Forms.Button();
             cursos = new System.Windows.Forms.ListBox();
             pictureBox3 = new System.Windows.Forms.PictureBox();
+            modificarCurso = new System.Windows.Forms.Button();
+            eliminarCurso = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -79,9 +81,9 @@
             // 
             // addCurso
             // 
-            addCurso.Location = new System.Drawing.Point(312, 282);
+            addCurso.Location = new System.Drawing.Point(158, 278);
             addCurso.Name = "addCurso";
-            addCurso.Size = new System.Drawing.Size(248, 47);
+            addCurso.Size = new System.Drawing.Size(170, 47);
             addCurso.TabIndex = 4;
             addCurso.Text = "Insertar Nuevo Curso";
             addCurso.UseVisualStyleBackColor = true;
@@ -93,9 +95,8 @@
             cursos.ItemHeight = 14;
             cursos.Location = new System.Drawing.Point(158, 104);
             cursos.Name = "cursos";
-            cursos.Size = new System.Drawing.Size(620, 144);
+            cursos.Size = new System.Drawing.Size(620, 130);
             cursos.TabIndex = 5;
-            cursos.SelectedIndexChanged += cursos_SelectedIndexChanged;
             // 
             // pictureBox3
             // 
@@ -107,12 +108,34 @@
             pictureBox3.TabIndex = 6;
             pictureBox3.TabStop = false;
             // 
+            // modificarCurso
+            // 
+            modificarCurso.Location = new System.Drawing.Point(401, 278);
+            modificarCurso.Name = "modificarCurso";
+            modificarCurso.Size = new System.Drawing.Size(156, 47);
+            modificarCurso.TabIndex = 7;
+            modificarCurso.Text = "Modificar Curso";
+            modificarCurso.UseVisualStyleBackColor = true;
+            modificarCurso.Click += modificarCurso_Click;
+            // 
+            // eliminarCurso
+            // 
+            eliminarCurso.Location = new System.Drawing.Point(627, 278);
+            eliminarCurso.Name = "eliminarCurso";
+            eliminarCurso.Size = new System.Drawing.Size(151, 47);
+            eliminarCurso.TabIndex = 8;
+            eliminarCurso.Text = "Eliminar Curso";
+            eliminarCurso.UseVisualStyleBackColor = true;
+            eliminarCurso.Click += eliminarCurso_Click;
+            // 
             // CursosAdmin
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(8F, 14F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             BackColor = System.Drawing.Color.DarkSlateBlue;
             ClientSize = new System.Drawing.Size(914, 420);
+            Controls.Add(eliminarCurso);
+            Controls.Add(modificarCurso);
             Controls.Add(pictureBox3);
             Controls.Add(cursos);
             Controls.Add(addCurso);
@@ -123,6 +146,7 @@
             Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             Icon = (System.Drawing.Icon)resources.GetObject("$this.Icon");
             Name = "CursosAdmin";
+            StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             Text = "CursosAdmin";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
@@ -139,5 +163,7 @@
         private System.Windows.Forms.Button addCurso;
         private System.Windows.Forms.ListBox cursos;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Button modificarCurso;
+        private System.Windows.Forms.Button eliminarCurso;
     }
 }

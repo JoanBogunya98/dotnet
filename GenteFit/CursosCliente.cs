@@ -1,6 +1,7 @@
 ﻿using DotNet_GenteFit.CapaDatos;
 using DotNet_GenteFit.CapaDatos.Entidades;
 using DotNet_GenteFit.CapaDatos.Infraestructura;
+using DotNet_GenteFit.Servicios;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,6 +18,7 @@ namespace DotNet_GenteFit
     {
         private readonly CursosDatos _cursosDatos;
         private readonly Cliente _cliente;
+        private readonly ServicioNavegacion _navegacion;
 
         public CursosCliente(Cliente cliente) : this()
         {
@@ -27,19 +29,17 @@ namespace DotNet_GenteFit
             InitializeComponent();
             _cursosDatos = new CursosDatos();
             CargarCursos();
+            this._navegacion = new ServicioNavegacion();
         }
 
         private void logout_Click(object sender, EventArgs e)
         {
-            foreach (Form form in Application.OpenForms)
-            {
-                form.Close();
-            }
+            _navegacion.Logout();
         }
 
         private void menu_Click(object sender, EventArgs e)
         {
-            MenuCliente menuCliente = new MenuCliente();
+            MenuCliente menuCliente = new MenuCliente(_cliente);
 
             this.Hide();
 

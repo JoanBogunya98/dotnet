@@ -14,4 +14,9 @@ public partial class Monitor
     public virtual ICollection<Horario> Horarios { get; } = new List<Horario>();
 
     public virtual Especialidad IdEspecialidadNavigation { get; set; }
+
+    public override string ToString()
+    {
+        return $"{NombreMonitor} - {IdEspecialidadNavigation?.NombreEspecialidad}";
+    }
 }

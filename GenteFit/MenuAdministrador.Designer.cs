@@ -111,6 +111,7 @@
             Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             Icon = (System.Drawing.Icon)resources.GetObject("$this.Icon");
             Name = "MenuAdministrador";
+            StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             Text = "MenuAdministrador";
             Load += MenuAdministrador_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
